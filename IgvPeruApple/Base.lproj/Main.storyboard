@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -84,14 +84,94 @@
                         <viewControllerLayoutGuide type="bottom" id="FNK-FE-ZjX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RN7-mX-XK4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-l9-SYz">
+                                <rect key="frame" x="156" y="115" width="144" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TV-EN-9FY">
+                                <rect key="frame" x="221" y="185" width="108" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ul-sB1">
+                                <rect key="frame" x="162" y="252" width="167" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf8-gX-eHx">
+                                <rect key="frame" x="20" y="115" width="118" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eph-Nb-xtR"/>
+                                    <constraint firstAttribute="width" constant="91" id="VUX-Bi-3ow"/>
+                                    <constraint firstAttribute="width" constant="118" id="beu-wR-5hu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="VUX-Bi-3ow"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-H4-Enm">
+                                <rect key="frame" x="20" y="185" width="118" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="3AB-U9-aMZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="NHF-lf-e5o"/>
+                                    <constraint firstAttribute="width" constant="118" id="SKj-La-dqC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3AB-U9-aMZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G82-IZ-cwy">
+                                <rect key="frame" x="156" y="185" width="76" height="30"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhQ-On-65B">
+                                <rect key="frame" x="20" y="252" width="118" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KvS-VU-RGD"/>
+                                    <constraint firstAttribute="width" constant="91" id="fiY-FV-0n6"/>
+                                    <constraint firstAttribute="width" constant="118" id="iR8-md-6pS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fiY-FV-0n6"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ATI-H4-Enm" firstAttribute="top" secondItem="Vf8-gX-eHx" secondAttribute="bottom" constant="40" id="0m9-Y0-mju"/>
+                            <constraint firstItem="Vf8-gX-eHx" firstAttribute="top" secondItem="7di-8a-gfw" secondAttribute="bottom" constant="115" id="9KA-u7-OX6"/>
+                            <constraint firstItem="ATI-H4-Enm" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="JQ8-BB-69R"/>
+                            <constraint firstItem="EhQ-On-65B" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="Tg9-Tl-DTd"/>
+                            <constraint firstItem="EhQ-On-65B" firstAttribute="top" secondItem="ATI-H4-Enm" secondAttribute="bottom" constant="40" id="jfm-Pn-BW2"/>
+                            <constraint firstItem="Vf8-gX-eHx" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="rDz-kQ-6gW"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D30-ES-RKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35.5" y="1233"/>
+            <point key="canvasLocation" x="35" y="1233"/>
         </scene>
         <!--Cronograma View Controller-->
         <scene sceneID="f93-24-gIl">
