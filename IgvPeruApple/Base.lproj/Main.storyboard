@@ -87,18 +87,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-l9-SYz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-l9-SYz">
                                 <rect key="frame" x="156" y="115" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hMS-zY-Ftf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TV-EN-9FY">
-                                <rect key="frame" x="221" y="185" width="108" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ul-sB1">
-                                <rect key="frame" x="162" y="252" width="167" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7TV-EN-9FY">
+                                <rect key="frame" x="216" y="185" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eW2-wI-W7k"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -119,26 +120,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-H4-Enm">
-                                <rect key="frame" x="20" y="185" width="118" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="3AB-U9-aMZ"/>
-                                    <constraint firstAttribute="height" constant="30" id="NHF-lf-e5o"/>
-                                    <constraint firstAttribute="width" constant="118" id="SKj-La-dqC"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3AB-U9-aMZ"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <pickerView contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G82-IZ-cwy">
-                                <rect key="frame" x="156" y="185" width="76" height="30"/>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhQ-On-65B">
                                 <rect key="frame" x="20" y="252" width="118" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,15 +137,59 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SUB TOTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-H4-Enm">
+                                <rect key="frame" x="20" y="185" width="118" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="3AB-U9-aMZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="NHF-lf-e5o"/>
+                                    <constraint firstAttribute="width" constant="118" id="SKj-La-dqC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3AB-U9-aMZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleAspectFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G82-IZ-cwy">
+                                <rect key="frame" x="156" y="185" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="MBp-kW-92Z"/>
+                                    <constraint firstAttribute="height" constant="30" id="QIc-6R-yHh"/>
+                                </constraints>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ul-sB1">
+                                <rect key="frame" x="156" y="252" width="144" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WxO-tE-skx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ATI-H4-Enm" firstAttribute="top" secondItem="Vf8-gX-eHx" secondAttribute="bottom" constant="40" id="0m9-Y0-mju"/>
-                            <constraint firstItem="Vf8-gX-eHx" firstAttribute="top" secondItem="7di-8a-gfw" secondAttribute="bottom" constant="115" id="9KA-u7-OX6"/>
+                            <constraint firstItem="Vf8-gX-eHx" firstAttribute="top" secondItem="7di-8a-gfw" secondAttribute="bottom" constant="50" id="9KA-u7-OX6"/>
+                            <constraint firstItem="G82-IZ-cwy" firstAttribute="top" secondItem="JPl-l9-SYz" secondAttribute="bottom" constant="40" id="G1l-WY-tlb"/>
                             <constraint firstItem="ATI-H4-Enm" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="JQ8-BB-69R"/>
+                            <constraint firstItem="7TV-EN-9FY" firstAttribute="leading" secondItem="G82-IZ-cwy" secondAttribute="trailing" constant="3" id="LJI-hh-2Gc"/>
+                            <constraint firstItem="7TV-EN-9FY" firstAttribute="top" secondItem="JPl-l9-SYz" secondAttribute="bottom" constant="40" id="MV0-bl-P05"/>
+                            <constraint firstItem="JPl-l9-SYz" firstAttribute="trailing" secondItem="RN7-mX-XK4" secondAttribute="trailingMargin" id="PAP-gm-XTD"/>
+                            <constraint firstItem="7TV-EN-9FY" firstAttribute="trailing" secondItem="RN7-mX-XK4" secondAttribute="trailingMargin" id="TZE-Ff-OqP"/>
                             <constraint firstItem="EhQ-On-65B" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="Tg9-Tl-DTd"/>
+                            <constraint firstItem="V7a-ul-sB1" firstAttribute="leading" secondItem="EhQ-On-65B" secondAttribute="trailing" constant="18" id="XdU-cV-6M3"/>
+                            <constraint firstItem="V7a-ul-sB1" firstAttribute="trailing" secondItem="RN7-mX-XK4" secondAttribute="trailingMargin" id="dM2-tu-Yh4"/>
+                            <constraint firstItem="V7a-ul-sB1" firstAttribute="top" secondItem="G82-IZ-cwy" secondAttribute="bottom" constant="37" id="iYG-w0-das"/>
                             <constraint firstItem="EhQ-On-65B" firstAttribute="top" secondItem="ATI-H4-Enm" secondAttribute="bottom" constant="40" id="jfm-Pn-BW2"/>
+                            <constraint firstItem="JPl-l9-SYz" firstAttribute="top" secondItem="7di-8a-gfw" secondAttribute="bottom" constant="115" id="jtJ-yC-R2m"/>
+                            <constraint firstItem="G82-IZ-cwy" firstAttribute="leading" secondItem="ATI-H4-Enm" secondAttribute="trailing" constant="18" id="kT6-gO-gIk"/>
                             <constraint firstItem="Vf8-gX-eHx" firstAttribute="leading" secondItem="RN7-mX-XK4" secondAttribute="leadingMargin" id="rDz-kQ-6gW"/>
+                            <constraint firstItem="JPl-l9-SYz" firstAttribute="leading" secondItem="Vf8-gX-eHx" secondAttribute="trailing" constant="18" id="w7x-yu-TXV"/>
+                            <constraint firstItem="7TV-EN-9FY" firstAttribute="leading" secondItem="G82-IZ-cwy" secondAttribute="trailing" constant="3" id="xR8-NC-pCh"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
