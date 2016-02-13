@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-0U-Izp">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-0U-Izp">
                                 <rect key="frame" x="20" y="41" width="335" height="29"/>
                                 <segments>
                                     <segment title="CALCULADORA"/>
@@ -29,19 +29,19 @@
                                     <action selector="showContainer:" destination="BYZ-38-t0r" eventType="valueChanged" id="F1h-eh-sXV"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-I3-bCj">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-I3-bCj">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                                 <connections>
                                     <segue destination="b7n-cx-CjZ" kind="embed" id="9VK-9T-FxY"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-ij-RMX">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-ij-RMX">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                                 <connections>
                                     <segue destination="9JT-60-cve" kind="embed" id="pO6-bp-M3q"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-kG-HM5">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-kG-HM5">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                                 <connections>
                                     <segue destination="4ai-Da-3Pe" kind="embed" id="GHR-8Q-4nc"/>
@@ -55,12 +55,15 @@
                             <constraint firstItem="0Zl-I3-bCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Awv-UR-lIe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OZX-ij-RMX" secondAttribute="bottom" id="Drh-sh-SgF"/>
                             <constraint firstItem="c2E-kG-HM5" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="GlR-sn-1sQ"/>
+                            <constraint firstItem="nn9-0U-Izp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JjY-Yc-Yln"/>
                             <constraint firstItem="OZX-ij-RMX" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="PNW-eW-hQE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c2E-kG-HM5" secondAttribute="trailing" constant="-20" id="QL7-jl-zSZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c2E-kG-HM5" secondAttribute="bottom" id="Qqd-Db-bGZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OZX-ij-RMX" secondAttribute="trailing" constant="-20" id="aB0-cP-eoc"/>
                             <constraint firstItem="0Zl-I3-bCj" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="dq5-st-1ON"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zl-I3-bCj" secondAttribute="bottom" id="jjd-Vw-xNW"/>
+                            <constraint firstItem="nn9-0U-Izp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pNI-yf-FbT"/>
+                            <constraint firstItem="nn9-0U-Izp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="poy-fS-kdw"/>
                             <constraint firstItem="c2E-kG-HM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vdn-44-OLh"/>
                         </constraints>
                     </view>
