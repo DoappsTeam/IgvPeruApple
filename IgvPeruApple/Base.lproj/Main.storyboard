@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-0U-Izp">
+                                <rect key="frame" x="20" y="41" width="335" height="29"/>
+                                <segments>
+                                    <segment title="CALCULADORA"/>
+                                    <segment title="CRONOGRAMA"/>
+                                    <segment title="HISTORIAL"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showContainer:" destination="BYZ-38-t0r" eventType="valueChanged" id="F1h-eh-sXV"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-I3-bCj">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <connections>
+                                    <segue destination="b7n-cx-CjZ" kind="embed" id="9VK-9T-FxY"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-ij-RMX">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <connections>
+                                    <segue destination="9JT-60-cve" kind="embed" id="pO6-bp-M3q"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-kG-HM5">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <connections>
+                                    <segue destination="4ai-Da-3Pe" kind="embed" id="GHR-8Q-4nc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Zl-I3-bCj" secondAttribute="trailing" constant="-20" id="7ar-p1-lGI"/>
+                            <constraint firstItem="OZX-ij-RMX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="88H-j3-48e"/>
+                            <constraint firstItem="0Zl-I3-bCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Awv-UR-lIe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OZX-ij-RMX" secondAttribute="bottom" id="Drh-sh-SgF"/>
+                            <constraint firstItem="c2E-kG-HM5" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="GlR-sn-1sQ"/>
+                            <constraint firstItem="OZX-ij-RMX" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="PNW-eW-hQE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c2E-kG-HM5" secondAttribute="trailing" constant="-20" id="QL7-jl-zSZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c2E-kG-HM5" secondAttribute="bottom" id="Qqd-Db-bGZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OZX-ij-RMX" secondAttribute="trailing" constant="-20" id="aB0-cP-eoc"/>
+                            <constraint firstItem="0Zl-I3-bCj" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="dq5-st-1ON"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zl-I3-bCj" secondAttribute="bottom" id="jjd-Vw-xNW"/>
+                            <constraint firstItem="c2E-kG-HM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vdn-44-OLh"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="calculadoraView" destination="0Zl-I3-bCj" id="mtR-aB-vur"/>
+                        <outlet property="cronogramaView" destination="OZX-ij-RMX" id="BgH-kS-WMu"/>
+                        <outlet property="historialView" destination="c2E-kG-HM5" id="fmj-YI-cit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="415.5"/>
+        </scene>
+        <!--Calculadora View Controller-->
+        <scene sceneID="TOa-h3-te5">
+            <objects>
+                <viewController id="b7n-cx-CjZ" customClass="CalculadoraViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7di-8a-gfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="FNK-FE-ZjX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RN7-mX-XK4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D30-ES-RKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.5" y="1233"/>
+        </scene>
+        <!--Cronograma View Controller-->
+        <scene sceneID="f93-24-gIl">
+            <objects>
+                <viewController id="9JT-60-cve" customClass="CronogramaViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iO7-de-TlZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="881-8Y-7Na"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8um-WJ-1ic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYw-V2-p1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422.5" y="1280.5"/>
+        </scene>
+        <!--Historial View Controller-->
+        <scene sceneID="Rqq-lY-iMi">
+            <objects>
+                <viewController id="4ai-Da-3Pe" customClass="HistorialViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0OC-Vw-Og1"/>
+                        <viewControllerLayoutGuide type="bottom" id="cgG-ou-lfa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BTI-nd-xtw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xw-eq-yXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846.5" y="822.5"/>
+        </scene>
+    </scenes>
+</document>

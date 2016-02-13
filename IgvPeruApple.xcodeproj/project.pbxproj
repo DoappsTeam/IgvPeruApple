@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
+		91FCFC421C6F996900EED667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC411C6F996900EED667 /* ViewController.swift */; };
+		91FCFC451C6F996900EED667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC431C6F996900EED667 /* Main.storyboard */; };
+		91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */; };
+		91FCFC4A1C6F996900EED667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC491C6F996900EED667 /* Assets.xcassets */; };
+		91FCFC4D1C6F996900EED667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC4B1C6F996900EED667 /* LaunchScreen.storyboard */; };
+		91FCFC581C6F996A00EED667 /* IgvPeruAppleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC571C6F996A00EED667 /* IgvPeruAppleTests.swift */; };
+		91FCFC631C6F996A00EED667 /* IgvPeruAppleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC621C6F996A00EED667 /* IgvPeruAppleUITests.swift */; };
+		91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */; };
+		91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */; };
+		91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */; };
+		91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC791C6FB1C800EED667 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91FCFC541C6F996A00EED667 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91FCFC341C6F996900EED667 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91FCFC3B1C6F996900EED667;
+			remoteInfo = IgvPeruApple;
+		};
+		91FCFC5F1C6F996A00EED667 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91FCFC341C6F996900EED667 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91FCFC3B1C6F996900EED667;
+			remoteInfo = IgvPeruApple;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FCFC3F1C6F996900EED667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91FCFC411C6F996900EED667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91FCFC441C6F996900EED667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IgvPeruApple.xcdatamodel; sourceTree = "<group>"; };
+		91FCFC491C6F996900EED667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91FCFC4C1C6F996900EED667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91FCFC4E1C6F996900EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FCFC531C6F996A00EED667 /* IgvPeruAppleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgvPeruAppleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FCFC571C6F996A00EED667 /* IgvPeruAppleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgvPeruAppleTests.swift; sourceTree = "<group>"; };
+		91FCFC591C6F996A00EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FCFC5E1C6F996A00EED667 /* IgvPeruAppleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgvPeruAppleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91FCFC621C6F996A00EED667 /* IgvPeruAppleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgvPeruAppleUITests.swift; sourceTree = "<group>"; };
+		91FCFC641C6F996A00EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculadoraViewController.swift; sourceTree = "<group>"; };
+		91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
+		91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
+		91FCFC791C6FB1C800EED667 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91FCFC391C6F996900EED667 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC501C6F996A00EED667 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC5B1C6F996A00EED667 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91FCFC331C6F996900EED667 = {
+			isa = PBXGroup;
+			children = (
+				91FCFC791C6FB1C800EED667 /* .gitignore */,
+				91FCFC3E1C6F996900EED667 /* IgvPeruApple */,
+				91FCFC561C6F996A00EED667 /* IgvPeruAppleTests */,
+				91FCFC611C6F996A00EED667 /* IgvPeruAppleUITests */,
+				91FCFC3D1C6F996900EED667 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91FCFC3D1C6F996900EED667 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */,
+				91FCFC531C6F996A00EED667 /* IgvPeruAppleTests.xctest */,
+				91FCFC5E1C6F996A00EED667 /* IgvPeruAppleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91FCFC3E1C6F996900EED667 /* IgvPeruApple */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC721C6F999100EED667 /* Model */,
+				91FCFC711C6F998800EED667 /* View */,
+				91FCFC701C6F997900EED667 /* Controller */,
+				91FCFC3F1C6F996900EED667 /* AppDelegate.swift */,
+				91FCFC491C6F996900EED667 /* Assets.xcassets */,
+				91FCFC4E1C6F996900EED667 /* Info.plist */,
+				91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */,
+			);
+			path = IgvPeruApple;
+			sourceTree = "<group>";
+		};
+		91FCFC561C6F996A00EED667 /* IgvPeruAppleTests */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC571C6F996A00EED667 /* IgvPeruAppleTests.swift */,
+				91FCFC591C6F996A00EED667 /* Info.plist */,
+			);
+			path = IgvPeruAppleTests;
+			sourceTree = "<group>";
+		};
+		91FCFC611C6F996A00EED667 /* IgvPeruAppleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC621C6F996A00EED667 /* IgvPeruAppleUITests.swift */,
+				91FCFC641C6F996A00EED667 /* Info.plist */,
+			);
+			path = IgvPeruAppleUITests;
+			sourceTree = "<group>";
+		};
+		91FCFC701C6F997900EED667 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC411C6F996900EED667 /* ViewController.swift */,
+				91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */,
+				91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */,
+				91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		91FCFC711C6F998800EED667 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC431C6F996900EED667 /* Main.storyboard */,
+				91FCFC4B1C6F996900EED667 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		91FCFC721C6F999100EED667 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91FCFC3B1C6F996900EED667 /* IgvPeruApple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FCFC671C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruApple" */;
+			buildPhases = (
+				91FCFC381C6F996900EED667 /* Sources */,
+				91FCFC391C6F996900EED667 /* Frameworks */,
+				91FCFC3A1C6F996900EED667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IgvPeruApple;
+			productName = IgvPeruApple;
+			productReference = 91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91FCFC521C6F996A00EED667 /* IgvPeruAppleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FCFC6A1C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruAppleTests" */;
+			buildPhases = (
+				91FCFC4F1C6F996A00EED667 /* Sources */,
+				91FCFC501C6F996A00EED667 /* Frameworks */,
+				91FCFC511C6F996A00EED667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91FCFC551C6F996A00EED667 /* PBXTargetDependency */,
+			);
+			name = IgvPeruAppleTests;
+			productName = IgvPeruAppleTests;
+			productReference = 91FCFC531C6F996A00EED667 /* IgvPeruAppleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91FCFC5D1C6F996A00EED667 /* IgvPeruAppleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91FCFC6D1C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruAppleUITests" */;
+			buildPhases = (
+				91FCFC5A1C6F996A00EED667 /* Sources */,
+				91FCFC5B1C6F996A00EED667 /* Frameworks */,
+				91FCFC5C1C6F996A00EED667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91FCFC601C6F996A00EED667 /* PBXTargetDependency */,
+			);
+			name = IgvPeruAppleUITests;
+			productName = IgvPeruAppleUITests;
+			productReference = 91FCFC5E1C6F996A00EED667 /* IgvPeruAppleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91FCFC341C6F996900EED667 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DoApps;
+				TargetAttributes = {
+					91FCFC3B1C6F996900EED667 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					91FCFC521C6F996A00EED667 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 91FCFC3B1C6F996900EED667;
+					};
+					91FCFC5D1C6F996A00EED667 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 91FCFC3B1C6F996900EED667;
+					};
+				};
+			};
+			buildConfigurationList = 91FCFC371C6F996900EED667 /* Build configuration list for PBXProject "IgvPeruApple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91FCFC331C6F996900EED667;
+			productRefGroup = 91FCFC3D1C6F996900EED667 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91FCFC3B1C6F996900EED667 /* IgvPeruApple */,
+				91FCFC521C6F996A00EED667 /* IgvPeruAppleTests */,
+				91FCFC5D1C6F996A00EED667 /* IgvPeruAppleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91FCFC3A1C6F996900EED667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */,
+				91FCFC4D1C6F996900EED667 /* LaunchScreen.storyboard in Resources */,
+				91FCFC4A1C6F996900EED667 /* Assets.xcassets in Resources */,
+				91FCFC451C6F996900EED667 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC511C6F996A00EED667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC5C1C6F996A00EED667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91FCFC381C6F996900EED667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */,
+				91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */,
+				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
+				91FCFC421C6F996900EED667 /* ViewController.swift in Sources */,
+				91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */,
+				91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC4F1C6F996A00EED667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FCFC581C6F996A00EED667 /* IgvPeruAppleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91FCFC5A1C6F996A00EED667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FCFC631C6F996A00EED667 /* IgvPeruAppleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91FCFC551C6F996A00EED667 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91FCFC3B1C6F996900EED667 /* IgvPeruApple */;
+			targetProxy = 91FCFC541C6F996A00EED667 /* PBXContainerItemProxy */;
+		};
+		91FCFC601C6F996A00EED667 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91FCFC3B1C6F996900EED667 /* IgvPeruApple */;
+			targetProxy = 91FCFC5F1C6F996A00EED667 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91FCFC431C6F996900EED667 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FCFC441C6F996900EED667 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91FCFC4B1C6F996900EED667 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91FCFC4C1C6F996900EED667 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91FCFC651C6F996A00EED667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91FCFC661C6F996A00EED667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91FCFC681C6F996A00EED667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IgvPeruApple/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruApple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		91FCFC691C6F996A00EED667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IgvPeruApple/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruApple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		91FCFC6B1C6F996A00EED667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IgvPeruAppleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruAppleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IgvPeruApple.app/IgvPeruApple";
+			};
+			name = Debug;
+		};
+		91FCFC6C1C6F996A00EED667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IgvPeruAppleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruAppleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IgvPeruApple.app/IgvPeruApple";
+			};
+			name = Release;
+		};
+		91FCFC6E1C6F996A00EED667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IgvPeruAppleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruAppleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IgvPeruApple;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		91FCFC6F1C6F996A00EED667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = IgvPeruAppleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.doapps.IgvPeruAppleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IgvPeruApple;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91FCFC371C6F996900EED667 /* Build configuration list for PBXProject "IgvPeruApple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FCFC651C6F996A00EED667 /* Debug */,
+				91FCFC661C6F996A00EED667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FCFC671C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruApple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FCFC681C6F996A00EED667 /* Debug */,
+				91FCFC691C6F996A00EED667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FCFC6A1C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruAppleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FCFC6B1C6F996A00EED667 /* Debug */,
+				91FCFC6C1C6F996A00EED667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91FCFC6D1C6F996A00EED667 /* Build configuration list for PBXNativeTarget "IgvPeruAppleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91FCFC6E1C6F996A00EED667 /* Debug */,
+				91FCFC6F1C6F996A00EED667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */,
+			);
+			currentVersion = 91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */;
+			path = IgvPeruApple.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 91FCFC341C6F996900EED667 /* Project object */;
+}
