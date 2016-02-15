@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -67,6 +67,13 @@
                             <constraint firstItem="c2E-kG-HM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vdn-44-OLh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XgE-1c-9A0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="7Ic-wi-o1c">
+                            <connections>
+                                <segue destination="xNi-JZ-Uyb" kind="show" id="LBC-Is-Pon"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="calculadoraView" destination="0Zl-I3-bCj" id="mtR-aB-vur"/>
@@ -76,7 +83,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="415.5"/>
+            <point key="canvasLocation" x="2708.5" y="360.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CMj-2Z-gPw">
+            <objects>
+                <viewController id="xNi-JZ-Uyb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7S-1a-Gz4"/>
+                        <viewControllerLayoutGuide type="bottom" id="xSr-oO-Qaz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ajS-ip-40b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqS-PH-ZUf">
+                                <rect key="frame" x="92" y="352" width="177" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="6Tr-0d-shj"/>
+                                    <constraint firstAttribute="width" constant="177" id="ggI-hk-S1x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="CONTÁCTANOS">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background_splash" translatesAutoresizingMaskIntoConstraints="NO" id="acA-BK-5je">
+                                <rect key="frame" x="0.0" y="-17" width="375" height="659"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acA-BK-5je" firstAttribute="top" secondItem="ajS-ip-40b" secondAttribute="topMargin" id="4F6-ih-wXW"/>
+                            <constraint firstItem="kqS-PH-ZUf" firstAttribute="leading" secondItem="ajS-ip-40b" secondAttribute="leadingMargin" constant="72" id="D5i-5k-Wen"/>
+                            <constraint firstItem="acA-BK-5je" firstAttribute="leading" secondItem="ajS-ip-40b" secondAttribute="leadingMargin" constant="-20" id="E2G-Gi-q4U"/>
+                            <constraint firstItem="xSr-oO-Qaz" firstAttribute="top" secondItem="acA-BK-5je" secondAttribute="bottom" id="TVp-IY-p9c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kqS-PH-ZUf" secondAttribute="trailing" constant="86" id="ZYt-BP-tTt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="acA-BK-5je" secondAttribute="trailing" constant="-20" id="b4K-zb-QAV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4F6-ih-wXW"/>
+                                <exclude reference="E2G-Gi-q4U"/>
+                                <exclude reference="b4K-zb-QAV"/>
+                                <exclude reference="TVp-IY-p9c"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnc-sD-eRM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3336.5" y="360.5"/>
         </scene>
         <!--Calculadora View Controller-->
         <scene sceneID="TOa-h3-te5">
@@ -238,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D30-ES-RKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="1233"/>
+            <point key="canvasLocation" x="2228" y="1256"/>
         </scene>
         <!--Cronograma View Controller-->
         <scene sceneID="f93-24-gIl">
@@ -298,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYw-V2-p1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422.5" y="1280.5"/>
+            <point key="canvasLocation" x="2752.5" y="1305.5"/>
         </scene>
         <!--Historial View Controller-->
         <scene sceneID="Rqq-lY-iMi">
@@ -317,10 +376,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xw-eq-yXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846.5" y="822.5"/>
+            <point key="canvasLocation" x="3324.5" y="1305.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jmE-0I-22v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fYF-MC-cLx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="udv-GU-UB6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0GG-Kx-sLb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AML-YD-4Ex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050.5" y="360.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background_splash" width="768" height="1360"/>
         <image name="button_background" width="1446" height="462"/>
         <image name="watermaker_doapps" width="450" height="450"/>
     </resources>
