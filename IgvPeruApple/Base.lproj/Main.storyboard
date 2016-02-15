@@ -223,6 +223,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="J8O-3o-qJj"/>
+                                <exclude reference="JBF-zd-SxJ"/>
                                 <exclude reference="jz3-6b-WuW"/>
                             </mask>
                         </variation>

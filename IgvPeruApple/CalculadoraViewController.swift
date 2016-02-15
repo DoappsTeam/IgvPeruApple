@@ -47,7 +47,7 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
             print("\(textIGV.text!)")
             print("\(textTotal.text!)")
             
-            if let newSub = Double(textSubt.text!) {
+            if  let newSub = Double(textSubt.text!) {
                 let newIgv = newSub * 0.19
                 let newTot = newSub + newIgv
                 if  newSub % 100 == 0 {
@@ -58,19 +58,11 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     }
                 else
                     {
-                    if newSub % 50 == 0 {
-                        let g = String(format : "%.1f" , newIgv)
-                        let h = String(format : "%.1f" , newTot)
-                        textIGV.text = "\( g )"
-                        textTotal.text = "\( h )"
-                        }
-                    else
-                        {
-                        let g = String(format : "%.2f" , newIgv)
-                        let h = String(format : "%.2f" , newTot)
-                        textIGV.text = "\( g )"
-                        textTotal.text = "\( h )"
-                        }
+                    let g = String(format : "%.2f" , newIgv)
+                    let h = String(format : "%.2f" , newTot)
+                    textIGV.text = "\( g )"
+                    textTotal.text = "\( h )"
+                        
                     }
                 }
             else
@@ -94,22 +86,13 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         let h = String(format : "%.0f" , newTot)
                         textIGV.text = "\( g )"
                         textTotal.text = "\( h )"
-                    }
+                        }
                     else
-                    {
-                        if newSub % 5 == 0 {
-                            let g = String(format : "%.1f" , newIgv)
-                            let h = String(format : "%.1f" , newTot)
-                            textIGV.text = "\( g )"
-                            textTotal.text = "\( h )"
-                        }
-                        else
                         {
-                            let g = String(format : "%.2f" , newIgv)
-                            let h = String(format : "%.2f" , newTot)
-                            textIGV.text = "\( g )"
-                            textTotal.text = "\( h )"
-                        }
+                        let g = String(format : "%.2f" , newIgv)
+                        let h = String(format : "%.2f" , newTot)
+                        textIGV.text = "\( g )"
+                        textTotal.text = "\( h )"
                     }
                 }
                 else
@@ -163,22 +146,13 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         let f = String(format : "%.0f" , totresult)
                         textIGV.text = "\( e )"
                         textTotal.text = "\( f )"
-                    }
+                        }
                     else
-                    {
-                        if subMonto % 5 == 0 {
-                            let e = String(format : "%.1f" , igvresult)
-                            let f = String(format : "%.1f" , totresult)
-                            textIGV.text = "\( e )"
-                            textTotal.text = "\( f )"
-                        }
-                        else
                         {
-                            let e = String(format : "%.2f" , igvresult)
-                            let f = String(format : "%.2f" , totresult)
-                            textIGV.text = "\( e )"
-                            textTotal.text = "\( f )"
-                        }
+                        let e = String(format : "%.2f" , igvresult)
+                        let f = String(format : "%.2f" , totresult)
+                        textIGV.text = "\( e )"
+                        textTotal.text = "\( f )"
                     }
                 }
                 else
@@ -253,22 +227,14 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         let f = String(format : "%.0f" , totresult)
                         textIGV.text = "\( e )"
                         textTotal.text = "\( f )"
-                    }
+                        }
                     else
-                    {
-                        if subMonto % 50 == 0 {
-                            let e = String(format : "%.1f" , igvresult)
-                            let f = String(format : "%.1f" , totresult)
-                            textIGV.text = "\( e )"
-                            textTotal.text = "\( f )"
-                        }
-                        else
                         {
-                            let e = String(format : "%.2f" , igvresult)
-                            let f = String(format : "%.2f" , totresult)
-                            textIGV.text = "\( e )"
-                            textTotal.text = "\( f )"
-                        }
+                        let e = String(format : "%.2f" , igvresult)
+                        let f = String(format : "%.2f" , totresult)
+                        textIGV.text = "\( e )"
+                        textTotal.text = "\( f )"
+                        
                     }
                 }
                 else
@@ -332,6 +298,11 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
             
         default : print("default")
         }
+        
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
         
     }
     
