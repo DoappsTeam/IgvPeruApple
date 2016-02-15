@@ -97,39 +97,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqS-PH-ZUf">
-                                <rect key="frame" x="92" y="352" width="177" height="39"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_splash" translatesAutoresizingMaskIntoConstraints="NO" id="Xp7-dn-E8J">
+                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ive-WZ-saH">
+                                <rect key="frame" x="109" y="382" width="157" height="38"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="6Tr-0d-shj"/>
-                                    <constraint firstAttribute="width" constant="177" id="ggI-hk-S1x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="CONTÁCTANOS">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="background_splash" translatesAutoresizingMaskIntoConstraints="NO" id="acA-BK-5je">
-                                <rect key="frame" x="0.0" y="-17" width="375" height="659"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="acA-BK-5je" firstAttribute="top" secondItem="ajS-ip-40b" secondAttribute="topMargin" id="4F6-ih-wXW"/>
-                            <constraint firstItem="kqS-PH-ZUf" firstAttribute="leading" secondItem="ajS-ip-40b" secondAttribute="leadingMargin" constant="72" id="D5i-5k-Wen"/>
-                            <constraint firstItem="acA-BK-5je" firstAttribute="leading" secondItem="ajS-ip-40b" secondAttribute="leadingMargin" constant="-20" id="E2G-Gi-q4U"/>
-                            <constraint firstItem="xSr-oO-Qaz" firstAttribute="top" secondItem="acA-BK-5je" secondAttribute="bottom" id="TVp-IY-p9c"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kqS-PH-ZUf" secondAttribute="trailing" constant="86" id="ZYt-BP-tTt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="acA-BK-5je" secondAttribute="trailing" constant="-20" id="b4K-zb-QAV"/>
+                            <constraint firstItem="Xp7-dn-E8J" firstAttribute="leading" secondItem="ajS-ip-40b" secondAttribute="leading" id="5l1-Rf-dMm"/>
+                            <constraint firstItem="Xp7-dn-E8J" firstAttribute="top" secondItem="ajS-ip-40b" secondAttribute="top" constant="55" id="B0W-ru-dDR"/>
+                            <constraint firstAttribute="trailing" secondItem="Xp7-dn-E8J" secondAttribute="trailing" id="aqe-hg-wb3"/>
+                            <constraint firstItem="xSr-oO-Qaz" firstAttribute="top" secondItem="Xp7-dn-E8J" secondAttribute="bottom" id="nDR-rg-f5b"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4F6-ih-wXW"/>
-                                <exclude reference="E2G-Gi-q4U"/>
-                                <exclude reference="b4K-zb-QAV"/>
-                                <exclude reference="TVp-IY-p9c"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
