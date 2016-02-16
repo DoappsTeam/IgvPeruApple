@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDCE1C726FCD002D912E /* WebViewController.swift */; };
+		26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDD01C727259002D912E /* ContactoViewController.swift */; };
 		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
 		91FCFC421C6F996900EED667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC411C6F996900EED667 /* ViewController.swift */; };
 		91FCFC451C6F996900EED667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC431C6F996900EED667 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26EFBDCE1C726FCD002D912E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		26EFBDD01C727259002D912E /* ContactoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FCFC3F1C6F996900EED667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FCFC411C6F996900EED667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */,
 				91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */,
 				91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */,
+				26EFBDCE1C726FCD002D912E /* WebViewController.swift */,
+				26EFBDD01C727259002D912E /* ContactoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,9 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */,
+				26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */,
 				91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */,
 				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
 				91FCFC421C6F996900EED667 /* ViewController.swift in Sources */,
+				26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */,
 				91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */,
 				91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */,
 			);
