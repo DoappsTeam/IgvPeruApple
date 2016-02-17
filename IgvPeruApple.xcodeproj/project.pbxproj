@@ -21,6 +21,7 @@
 		91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */; };
 		91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */; };
 		91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC791C6FB1C800EED667 /* .gitignore */; };
+		EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
 		91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		91FCFC791C6FB1C800EED667 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */,
 				26EFBDCE1C726FCD002D912E /* WebViewController.swift */,
 				26EFBDD01C727259002D912E /* ContactoViewController.swift */,
+				EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */,
 				26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */,
+				EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */,
 				91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */,
 				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
 				91FCFC421C6F996900EED667 /* ViewController.swift in Sources */,

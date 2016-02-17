@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -26,46 +26,23 @@
                                     <segment title="CRONOGRAMA"/>
                                     <segment title="HISTORIAL"/>
                                 </segments>
-                                <connections>
-                                    <action selector="showContainer:" destination="BYZ-38-t0r" eventType="valueChanged" id="F1h-eh-sXV"/>
-                                </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-I3-bCj">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-QU-qQq">
+                                <rect key="frame" x="0.0" y="86" width="375" height="581"/>
                                 <connections>
-                                    <segue destination="b7n-cx-CjZ" kind="embed" id="9VK-9T-FxY"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-ij-RMX">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
-                                <connections>
-                                    <segue destination="9JT-60-cve" kind="embed" id="pO6-bp-M3q"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2E-kG-HM5">
-                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
-                                <connections>
-                                    <segue destination="4ai-Da-3Pe" kind="embed" id="GHR-8Q-4nc"/>
+                                    <segue destination="Xg4-Mg-iJm" kind="embed" identifier="pageShow" id="Dnh-mv-9TC"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Zl-I3-bCj" secondAttribute="trailing" constant="-20" id="7ar-p1-lGI"/>
-                            <constraint firstItem="OZX-ij-RMX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="88H-j3-48e"/>
-                            <constraint firstItem="0Zl-I3-bCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Awv-UR-lIe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OZX-ij-RMX" secondAttribute="bottom" id="Drh-sh-SgF"/>
-                            <constraint firstItem="c2E-kG-HM5" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="GlR-sn-1sQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lV2-QU-qQq" secondAttribute="bottom" id="5Fg-Hx-jmp"/>
+                            <constraint firstItem="lV2-QU-qQq" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="17" id="5Va-Pe-216"/>
+                            <constraint firstItem="lV2-QU-qQq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ckr-mt-Aik"/>
                             <constraint firstItem="nn9-0U-Izp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JjY-Yc-Yln"/>
-                            <constraint firstItem="OZX-ij-RMX" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="PNW-eW-hQE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c2E-kG-HM5" secondAttribute="trailing" constant="-20" id="QL7-jl-zSZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c2E-kG-HM5" secondAttribute="bottom" id="Qqd-Db-bGZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OZX-ij-RMX" secondAttribute="trailing" constant="-20" id="aB0-cP-eoc"/>
-                            <constraint firstItem="0Zl-I3-bCj" firstAttribute="top" secondItem="nn9-0U-Izp" secondAttribute="bottom" constant="26" id="dq5-st-1ON"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Zl-I3-bCj" secondAttribute="bottom" id="jjd-Vw-xNW"/>
+                            <constraint firstAttribute="trailing" secondItem="lV2-QU-qQq" secondAttribute="trailing" id="KaW-kJ-hiA"/>
                             <constraint firstItem="nn9-0U-Izp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pNI-yf-FbT"/>
                             <constraint firstItem="nn9-0U-Izp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="poy-fS-kdw"/>
-                            <constraint firstItem="c2E-kG-HM5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vdn-44-OLh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XgE-1c-9A0">
@@ -81,14 +58,22 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="calculadoraView" destination="0Zl-I3-bCj" id="mtR-aB-vur"/>
-                        <outlet property="cronogramaView" destination="OZX-ij-RMX" id="BgH-kS-WMu"/>
-                        <outlet property="historialView" destination="c2E-kG-HM5" id="fmj-YI-cit"/>
+                        <outlet property="segmento" destination="nn9-0U-Izp" id="93P-34-rcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2708.5" y="360.5"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="aDe-Dw-xI7">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Xg4-Mg-iJm" customClass="IGVPageViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ie4-Q2-ujx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2665" y="1069"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="CMj-2Z-gPw">
@@ -232,13 +217,13 @@
         <!--Calculadora View Controller-->
         <scene sceneID="TOa-h3-te5">
             <objects>
-                <viewController id="b7n-cx-CjZ" customClass="CalculadoraViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calculadora" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7n-cx-CjZ" customClass="CalculadoraViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7di-8a-gfw"/>
                         <viewControllerLayoutGuide type="bottom" id="FNK-FE-ZjX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RN7-mX-XK4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-l9-SYz">
@@ -379,7 +364,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="picker" destination="ylz-0V-tnT" id="TOU-ka-CbG"/>
                         <outlet property="textIGV" destination="7TV-EN-9FY" id="x8V-qq-lm7"/>
@@ -389,12 +374,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D30-ES-RKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="1256"/>
+            <point key="canvasLocation" x="2201.5" y="1822.5"/>
         </scene>
         <!--Cronograma View Controller-->
         <scene sceneID="f93-24-gIl">
             <objects>
-                <viewController id="9JT-60-cve" customClass="CronogramaViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cronograma" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9JT-60-cve" customClass="CronogramaViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iO7-de-TlZ"/>
                         <viewControllerLayoutGuide type="bottom" id="881-8Y-7Na"/>
@@ -449,12 +434,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYw-V2-p1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752.5" y="1305.5"/>
+            <point key="canvasLocation" x="2643.5" y="1822.5"/>
         </scene>
         <!--Historial View Controller-->
         <scene sceneID="Rqq-lY-iMi">
             <objects>
-                <viewController id="4ai-Da-3Pe" customClass="HistorialViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="historial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4ai-Da-3Pe" customClass="HistorialViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0OC-Vw-Og1"/>
                         <viewControllerLayoutGuide type="bottom" id="cgG-ou-lfa"/>
@@ -468,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Xw-eq-yXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3324.5" y="1305.5"/>
+            <point key="canvasLocation" x="3120.5" y="1822.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jmE-0I-22v">
