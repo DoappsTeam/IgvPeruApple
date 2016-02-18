@@ -175,17 +175,17 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                             textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                             if let subMonto = Double(myString){
                                 let igvresult = subMonto * 0.18
-                                let qw = igvresult + subMonto
+                                let totresult = igvresult + subMonto
                                 if subMonto % 50 == 0 {
                                     let a = String(format : "%.0f" , igvresult)
-                                    let b = String(format : "%.0f" , qw)
+                                    let b = String(format : "%.0f" , totresult)
                                     textIGV.text = "\( a )"
                                     textTotal.text = "\( b )"
                                     }
                                 else
                                     {
                                     let a = String(format : "%.2f" , igvresult)
-                                    let b = String(format : "%.2f" , qw)
+                                    let b = String(format : "%.2f" , totresult)
                                     textIGV.text = "\( a )"
                                     textTotal.text = "\( b )"
                                     }
@@ -446,17 +446,17 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                         if let subMonto = Double(myString){
                             let igvresult = subMonto * 0.19
-                            let qw = igvresult + subMonto
+                            let totresult = igvresult + subMonto
                             if subMonto % 100 == 0 {
                                 let a = String(format : "%.0f" , igvresult)
-                                let b = String(format : "%.0f" , qw)
+                                let b = String(format : "%.0f" , totresult)
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
                             else
                                 {
                                 let a = String(format : "%.2f" , igvresult)
-                                let b = String(format : "%.2f" , qw)
+                                let b = String(format : "%.2f" , totresult)
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
@@ -472,17 +472,17 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         {
                         if let subMonto = Double(myString){
                             let igvresult = subMonto * 0.19
-                            let qw = igvresult + subMonto
+                            let totresult = igvresult + subMonto
                             if subMonto % 100 == 0 {
                                 let a = String(format : "%.0f" , igvresult)
-                                let b = String(format : "%.0f" , qw)
+                                let b = String(format : "%.0f" , totresult)
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
                             else
                                 {
                                 let a = String(format : "%.2f" , igvresult)
-                                let b = String(format : "%.2f" , qw)
+                                let b = String(format : "%.2f" , totresult)
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
