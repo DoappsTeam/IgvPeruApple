@@ -70,7 +70,7 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 textIGV.text = ""
                 textTotal.text = ""
                 }
-            
+            //as
             }
         else
             {
