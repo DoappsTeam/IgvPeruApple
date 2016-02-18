@@ -19,13 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-0U-Izp">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nn9-0U-Izp">
                                 <rect key="frame" x="20" y="41" width="335" height="29"/>
                                 <segments>
                                     <segment title="CALCULADORA"/>
                                     <segment title="CRONOGRAMA"/>
                                     <segment title="HISTORIAL"/>
                                 </segments>
+                                <color key="tintColor" red="0.098039215686274508" green="0.68627450980392157" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-QU-qQq">
                                 <rect key="frame" x="0.0" y="86" width="375" height="581"/>
@@ -47,7 +48,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XgE-1c-9A0">
                         <barButtonItem key="leftBarButtonItem" title=" " id="PAt-Kk-GXH"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="7Ic-wi-o1c">
+                        <barButtonItem key="rightBarButtonItem" image="ic_info" style="plain" id="7Ic-wi-o1c">
                             <connections>
                                 <segue destination="xNi-JZ-Uyb" kind="show" id="LBC-Is-Pon"/>
                             </connections>
@@ -58,6 +59,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="navigationItem" destination="XgE-1c-9A0" id="4Xp-7S-bn0"/>
                         <outlet property="segmento" destination="nn9-0U-Izp" id="93P-34-rcI"/>
                     </connections>
                 </viewController>
@@ -140,7 +142,7 @@
                             <constraint firstItem="SsU-nd-sOo" firstAttribute="top" secondItem="eA9-cY-zhT" secondAttribute="bottom" constant="22" id="kNy-8n-gLM"/>
                             <constraint firstItem="SsU-nd-sOo" firstAttribute="top" secondItem="eA9-cY-zhT" secondAttribute="bottom" constant="25" id="nVI-dh-6Vb"/>
                             <constraint firstItem="Zur-qO-uO8" firstAttribute="top" secondItem="SsU-nd-sOo" secondAttribute="bottom" constant="24" id="orC-Xk-rED"/>
-                            <constraint firstItem="Xp7-dn-E8J" firstAttribute="top" secondItem="ajS-ip-40b" secondAttribute="topMargin" constant="55" id="qMA-Ay-v7w"/>
+                            <constraint firstItem="Xp7-dn-E8J" firstAttribute="top" secondItem="ajS-ip-40b" secondAttribute="topMargin" constant="135" id="qMA-Ay-v7w"/>
                             <constraint firstItem="SsU-nd-sOo" firstAttribute="top" secondItem="eA9-cY-zhT" secondAttribute="bottom" constant="25" id="ski-Fq-rg6"/>
                             <constraint firstItem="Zur-qO-uO8" firstAttribute="centerX" secondItem="ajS-ip-40b" secondAttribute="centerX" id="vD3-DW-chQ"/>
                             <constraint firstItem="Zur-qO-uO8" firstAttribute="top" secondItem="SsU-nd-sOo" secondAttribute="bottom" constant="33" id="wqT-Wm-hSL"/>
@@ -163,7 +165,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mrg-rR-gvs">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="aAk-jL-3qN">
+                            <barButtonItem image="ic_share" style="done" id="aAk-jL-3qN">
                                 <connections>
                                     <action selector="buttonShare:" destination="xNi-JZ-Uyb" id="Tae-4P-Reg"/>
                                 </connections>
@@ -396,7 +398,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PoU-rA-vDg" id="frK-tD-wde">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENERO 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-aa-thT">
@@ -630,7 +632,9 @@
     </scenes>
     <resources>
         <image name="background_splash" width="768" height="1360"/>
-        <image name="button_background" width="1446" height="462"/>
+        <image name="button_background" width="797" height="241"/>
+        <image name="ic_info" width="56" height="56"/>
+        <image name="ic_share" width="56" height="56"/>
         <image name="img_about" width="520" height="152"/>
         <image name="watermaker_doapps" width="450" height="450"/>
     </resources>
