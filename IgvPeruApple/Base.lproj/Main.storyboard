@@ -559,7 +559,7 @@
     </scenes>
     <resources>
         <image name="background_splash" width="768" height="1360"/>
-        <image name="button_background" width="1446" height="462"/>
+        <image name="button_background" width="797" height="241"/>
         <image name="ic_info" width="56" height="56"/>
         <image name="ic_share" width="56" height="56"/>
         <image name="img_about" width="520" height="152"/>
