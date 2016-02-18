@@ -17,6 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        // Custom NavigationBar
+        /*let imageNav:UIImage = UIImage(named: "button_background")!
+        UINavigationBar.appearance().setBackgroundImage(imageNav, forBarMetrics: .Default)*/
+        
+        /*UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().translucent = true*/
+        
         return true
     }
 
