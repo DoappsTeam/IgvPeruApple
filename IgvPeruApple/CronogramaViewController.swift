@@ -7,33 +7,88 @@
 //
 
 import UIKit
-
-class CronogramaViewController: UIViewController,UITableViewDataSource {
+protocol CronogramaViewControllerDelegate{
+    func guardar(name: String,ruc : Int)
+}
+class CronogramaViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     lazy var fechasLine: FechasLine = {
         return FechasLine.fillData()
     }()
-    var meses = ["ENERO 2016","FEBRERO 2016","MARZO 2016","ABRIL 2016","MAYO 2016","JUNIO 2016",
-        "JULIO 2016","AGOSTO 2016","SEPTIEMBRE 2016","OCTUBRE 2O16","NOVIEMBRE 2016","DICIEMBRE 2016"]
-    var array = [Int]()
-    
+    var meses1 = ["ENERO 2016","FEBRERO 2016","MARZO 2016","ABRIL 2016","MAYO 2016","JUNIO 2016","JULIO 2016","AGOSTO 2016","SEPTIEMBRE 2016","OCTUBRE 2O16","NOVIEMBRE 2016","DICIEMBRE 2016"]
+    var meses2 = ["de Febrero","de Marzo","de Abril","de Mayo","de Junio","de Julio","de Agosto","de Septiembre","de Octubre","de Noviembre","de Diciembre","de Enero"]
+    var ultimoDigito = 0
     //Variables
     @IBOutlet weak var tabla: UITableView!
     @IBOutlet weak var rucTF: UITextField!
+    //Botones
+    @IBOutlet weak var volverABuscarButton: UIButton!
+    @IBOutlet weak var buscarButton: UIButton!
+    @IBOutlet weak var fechaRegular: UIButton!
+    @IBOutlet weak var periodo: UIButton!
+    @IBOutlet weak var guardarRucButton: UIButton!
+     var cronogramaDelegate : CronogramaViewControllerDelegate? //Delegado
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabla.hidden = true
+        self.volverABuscarButton.hidden = true
+        self.guardarRucButton.hidden = true
+        self.periodo.hidden = true
+        self.fechaRegular.hidden = true
+        self.tabla.hidden = true
         // Do any additional setup after loading the view.
     }
-
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        self.view.endEditing(true)
+    }
+    //MARK: - TextField validacion
+    @IBAction func rucTFChanged(sender: AnyObject) {
+        if let array = rucTF.text where array != ""{
+            let caracteres = [Character](array.characters)
+            if caracteres.count > 10{
+                rucTF.text = "\(caracteres[0])\(caracteres[1])\(caracteres[2])\(caracteres[3])\(caracteres[4])\(caracteres[5])\(caracteres[6])\(caracteres[7])\(caracteres[8])\(caracteres[9])\(caracteres[10])"
+            }
+        }
+    }
+    //MARK: - Boton Buscar
     @IBAction func search(sender: AnyObject) {
-        guard let tf = rucTF.text else{
+        print("boton buscar presionado")
+        guard let tf = rucTF.text where tf != ""  else{
             return
         }
-        let dic = fechasLine.fechas[Int(tf)!]
-        let cadena = dic[Int(tf)!]
-        self.array = cadena!
-        tabla.reloadData()
-        tabla.hidden = false
+        let cadena = [Character](tf.characters)
+        let count = cadena.count
+        if count == 11{
+            let IntegerArray = Int(tf)
+            let ultimoDigito = IntegerArray! % 10
+            self.ultimoDigito = ultimoDigito
+            self.rucTF.resignFirstResponder()
+            self.tabla.reloadData()
+            self.tabla.hidden = false
+            self.volverABuscarButton.hidden = false
+            self.guardarRucButton.hidden = false
+        }else{
+            print("ponga un ruc valido")
+        }
+        
+        
+    }
+    
+    @IBAction func restartSearch(sender: AnyObject) {
+        print("volver a buscar presionado")
+    }
+    
+    @IBAction func saveRuc(sender: AnyObject) {
+        print("guardar Ruc presionado")
+        let alertGuardar = UIAlertController(title: "Agregar RUC", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        alertGuardar.addTextFieldWithConfigurationHandler { (nombre) -> Void in
+            nombre.placeholder = "Nombre"
+            guard let cad = nombre.text where cad != "" else{
+                return
+            }
+        }
+        alertGuardar.addAction(UIAlertAction(title: "Guardar", style: UIAlertActionStyle.Default, handler: nil))
+        presentViewController(alertGuardar, animated: true, completion: nil)
         
     }
     //MARK: - Datasource table methods
@@ -42,24 +97,13 @@ class CronogramaViewController: UIViewController,UITableViewDataSource {
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tabla.dequeueReusableCellWithIdentifier("cell cronograma", forIndexPath: indexPath) as! IGVTableViewCell
-        //let fecha = "\(array[indexPath.row])"
-        let fecha = "jajaj"
-        cell.configureCellWith(meses[indexPath.row], fech: fecha)
+        let fechas = fechasLine.fechas
+        let fechaUltimoDigito = fechas[self.ultimoDigito]
+        let arrayConFechasDePago = fechaUltimoDigito[self.ultimoDigito]
+        let num = arrayConFechasDePago![indexPath.row]
+        let deMes = meses2[indexPath.row]
+        let juntamos = "\(num) \(deMes)"
+        cell.configureCellWith(meses1[indexPath.row], fech: juntamos)
         return cell
     }
-
-    
-   
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
