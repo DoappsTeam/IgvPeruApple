@@ -19,7 +19,6 @@ class ContactoViewController: UIViewController {
         let shareText = "Checkout my latest app #coolapp"
         let activityViewController = UIActivityViewController(activityItems:[shareText], applicationActivities: nil)
             presentViewController(activityViewController, animated: true, completion: nil)
-        
     }
     
     

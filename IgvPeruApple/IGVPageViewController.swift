@@ -30,7 +30,7 @@ class IGVPageViewController: UIPageViewController {
         return vc
     }
     //Notifica a el PVC que se ha cambiado de pagina
-    func notifyTutorialDelegateOfNewIndex() {
+    func notifyDelegateOfNewIndex() {
         if let currentVC = viewControllers?.first,
             let index = pages.indexOf(currentVC.restorationIdentifier!){
                 pageDelegate?.pageViewController(self, didUpdatePageIndex: index)
@@ -71,6 +71,6 @@ extension IGVPageViewController: UIPageViewControllerDataSource{
 //MARK: - Delegate methods
 extension IGVPageViewController: UIPageViewControllerDelegate{
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool){
-        notifyTutorialDelegateOfNewIndex()
+        notifyDelegateOfNewIndex()
     }
 }
