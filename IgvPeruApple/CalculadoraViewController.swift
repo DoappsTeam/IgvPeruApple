@@ -447,10 +447,19 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         if let subMonto = Double(myString){
                             let igvresult = subMonto * 0.19
                             let qw = igvresult + subMonto
-                            let a = String(format : "%.2f" , igvresult)
-                            let b = String(format : "%.2f" , qw)
-                            textIGV.text = "\(a)"
-                            textTotal.text = "\(b)"
+                            if subMonto % 100 == 0 {
+                                let a = String(format : "%.0f" , igvresult)
+                                let b = String(format : "%.0f" , qw)
+                                textIGV.text = "\( a )"
+                                textTotal.text = "\( b )"
+                                }
+                            else
+                                {
+                                let a = String(format : "%.2f" , igvresult)
+                                let b = String(format : "%.2f" , qw)
+                                textIGV.text = "\( a )"
+                                textTotal.text = "\( b )"
+                                }
                             }
                         else
                             {
