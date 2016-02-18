@@ -22,6 +22,8 @@
 		91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */; };
 		91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC791C6FB1C800EED667 /* .gitignore */; };
 		EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */; };
+		EA47D02B1C751AA000E0BAC4 /* FechasLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */; };
+		EA47D02D1C752F1500E0BAC4 /* IGVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		91FCFC791C6FB1C800EED667 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVPageViewController.swift; sourceTree = "<group>"; };
+		EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechasLine.swift; sourceTree = "<group>"; };
+		EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				26EFBDCE1C726FCD002D912E /* WebViewController.swift */,
 				26EFBDD01C727259002D912E /* ContactoViewController.swift */,
 				EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */,
+				EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		91FCFC721C6F999100EED667 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -310,7 +316,9 @@
 				EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */,
 				91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */,
 				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
+				EA47D02B1C751AA000E0BAC4 /* FechasLine.swift in Sources */,
 				91FCFC421C6F996900EED667 /* ViewController.swift in Sources */,
+				EA47D02D1C752F1500E0BAC4 /* IGVTableViewCell.swift in Sources */,
 				26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */,
 				91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */,
 				91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */,

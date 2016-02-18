@@ -23,7 +23,8 @@ class ViewController: UIViewController {
         if let igvPVC = segue.destinationViewController as? IGVPageViewController {
             self.igvPageViewController = igvPVC
         }
-    }}
+    }
+}
 extension ViewController: IGVPageViewControllerDelegate{
     func pageViewController(pageViewController: UIPageViewController, didUpdatePageIndex index: Int) {
         self.segmento.selectedSegmentIndex = index
