@@ -14,11 +14,7 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var percent = 18
     var focus = 0
     
-    
-    
     @IBOutlet weak var picker: UIPickerView!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
@@ -46,7 +42,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
             print("\(textSubt.text!)")
             print("\(textIGV.text!)")
             print("\(textTotal.text!)")
-            
             if  let newSub = Double(textSubt.text!) {
                 let newIgv = newSub * 0.19
                 let newTot = newSub + newIgv
@@ -62,7 +57,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     let h = String(format : "%.2f" , newTot)
                     textIGV.text = "\( g )"
                     textTotal.text = "\( h )"
-                        
                     }
                 }
             else
@@ -77,7 +71,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 print("\(textSubt.text!)")
                 print("\(textIGV.text!)")
                 print("\(textTotal.text!)")
-                
                 if let newSub = Double(textSubt.text!) {
                     let newIgv = newSub * 0.18
                     let newTot = newSub + newIgv
@@ -95,13 +88,12 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         textTotal.text = "\( h )"
                     }
                 }
-                else
+            else
                 {
-                    textIGV.text = ""
-                    textTotal.text = ""
+                textIGV.text = ""
+                textTotal.text = ""
                 }
         }
-        
         print("\(percent)")
     }
     
@@ -112,8 +104,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var textSubt: UITextField!
     @IBOutlet weak var textIGV: UITextField!
     @IBOutlet weak var textTotal: UITextField!
-    
-    
     
     @IBAction func ubicacionSub(sender: AnyObject) {
         print("esta en el SUBTOTAL")
@@ -171,9 +161,12 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         print(contArray[1])
                         let carac = [Character](contArray[1].characters)
                         print(carac)
+                        if  textSubt.text == "\(contArray[0]).." {
+                            textSubt.text = "\(contArray[0])."
+                        }
                         if carac.count > 1 {
                             textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
-                            if let subMonto = Double(myString){
+                            if  let subMonto = Double(myString){
                                 let igvresult = subMonto * 0.18
                                 let totresult = igvresult + subMonto
                                 if subMonto % 50 == 0 {
@@ -189,11 +182,26 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                     textIGV.text = "\( a )"
                                     textTotal.text = "\( b )"
                                     }
-                                }
-                            else
-                                {
-                                textIGV.text = ""
-                                textTotal.text = ""
+                                
+                                if carac.count == 3 {
+                                    textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                    let newValor = Double(textSubt.text!)
+                                    let igvresult = newValor! * 0.18
+                                    let totresult = igvresult + newValor!
+                                    if newValor! % 50 == 0 {
+                                        let a = String(format : "%.0f" , igvresult)
+                                        let b = String(format : "%.0f" , totresult)
+                                        textIGV.text = "\( a )"
+                                        textTotal.text = "\( b )"
+                                        }
+                                    else
+                                        {
+                                        let a = String(format : "%.2f" , igvresult)
+                                        let b = String(format : "%.2f" , totresult)
+                                        textIGV.text = "\( a )"
+                                        textTotal.text = "\( b )"
+                                        }
+                                    }
                                 }
                             }
                         else
@@ -214,11 +222,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                     textIGV.text = "\( a )"
                                     textTotal.text = "\( b )"
                                     }
-                                }
-                            else
-                                {
-                                textIGV.text = ""
-                                textTotal.text = ""
                                 }
                             }
                         }
@@ -259,6 +262,9 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     print(contArray[1])
                     let carac = [Character](contArray[1].characters)
                     print(carac)
+                    if  textIGV.text == "\(contArray[0]).." {
+                        textIGV.text = "\(contArray[0])."
+                    }
                     if carac.count > 1 {
                         textIGV.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                         if  let igvMonto = Double(textIGV.text!) {
@@ -277,11 +283,25 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textSubt.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
-                            }
-                        else
-                            {
-                            textTotal.text = ""
-                            textSubt.text = ""
+                            if carac.count == 3 {
+                                textIGV.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                let newValor = Double(textIGV.text!)
+                                let subresult = newValor! * 5.55555555555556
+                                let totalresult = newValor! + subresult
+                                if newValor! % 9 == 0 {
+                                    let a = String(format : "%.0f" , subresult)
+                                    let b = String(format : "%.0f", totalresult)
+                                    textSubt.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                else
+                                    {
+                                    let a = String(format : "%.2f" , subresult)
+                                    let b = String(format : "%.2f", totalresult)
+                                    textSubt.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                }
                             }
                         }
                     else
@@ -303,13 +323,7 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textTotal.text = "\( b )"
                                 }
                             }
-                        else
-                            {
-                            textTotal.text = ""
-                            textSubt.text = ""
-                            }
                         }
-
                     }
 
                 
@@ -349,6 +363,9 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                         print(contArray[1])
                         let carac = [Character](contArray[1].characters)
                         print(carac)
+                        if  textTotal.text == "\(contArray[0]).." {
+                            textTotal.text = "\(contArray[0])."
+                        }
                         if  carac.count > 1 {
                             textTotal.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                             if  let totalMonto = Double(textTotal.text!) {
@@ -367,11 +384,25 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                     textIGV.text = "\( a )"
                                     textSubt.text = "\( b )"
                                     }
-                                }
-                            else
-                                {
-                                textSubt.text = ""
-                                textIGV.text = ""
+                                if carac.count == 3 {
+                                    textTotal.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                    let newValor = Double(textTotal.text!)
+                                    let igbresult = newValor! * 0.15254237288136
+                                    let subresults = newValor! - igbresult
+                                    if newValor! % 59 == 0 {
+                                        let a = String(format : "%.0f", igbresult)
+                                        let b = String(format : "%.0f", subresults)
+                                        textIGV.text = "\( a )"
+                                        textSubt.text = "\( b )"
+                                        }
+                                    else
+                                        {
+                                        let a = String(format : "%.2f", igbresult)
+                                        let b = String(format : "%.2f", subresults)
+                                        textIGV.text = "\( a )"
+                                        textSubt.text = "\( b )"
+                                        }
+                                    }
                                 }
                             }
                         else
@@ -392,11 +423,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                         textIGV.text = "\( a )"
                                         textSubt.text = "\( b )"
                                         }
-                                    }
-                                else
-                                    {
-                                    textSubt.text = ""
-                                    textIGV.text = ""
                                     }
                                 }
                             }
@@ -442,6 +468,9 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     print(contArray[1])
                     let carac = [Character](contArray[1].characters)
                     print(carac)
+                    if  textSubt.text == "\(contArray[0]).." {
+                        textSubt.text = "\(contArray[0])."
+                        }
                     if carac.count > 1 {
                         textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                         if let subMonto = Double(myString){
@@ -460,13 +489,26 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
+                            if carac.count == 3 {
+                                textSubt.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                let newValor = Double(textSubt.text!)
+                                let igvresult = newValor! * 0.19
+                                let totresult = igvresult + newValor!
+                                if newValor! % 100 == 0 {
+                                    let a = String(format : "%.0f" , igvresult)
+                                    let b = String(format : "%.0f" , totresult)
+                                    textIGV.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                else
+                                    {
+                                    let a = String(format : "%.2f" , igvresult)
+                                    let b = String(format : "%.2f" , totresult)
+                                    textIGV.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                }
                             }
-                        else
-                            {
-                            textIGV.text = ""
-                            textTotal.text = ""
-                            }
-
                         }
                     else
                         {
@@ -486,11 +528,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textIGV.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
-                            }
-                        else
-                            {
-                            textIGV.text = ""
-                            textTotal.text = ""
                             }
                         }
                     }
@@ -530,6 +567,9 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                     print(contArray[1])
                     let carac = [Character](contArray[1].characters)
                     print(carac)
+                    if  textIGV.text == "\(contArray[0]).." {
+                        textIGV.text = "\(contArray[0])."
+                        }
                     if carac.count > 1 {
                         textIGV.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                         if  let igvMonto = Double(textIGV.text!) {
@@ -548,11 +588,25 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textSubt.text = "\( a )"
                                 textTotal.text = "\( b )"
                                 }
-                            }
-                        else
-                            {
-                            textTotal.text = ""
-                            textSubt.text = ""
+                            if carac.count == 3 {
+                                textIGV.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                let newValor = Double(textIGV.text!)
+                                let subresult = newValor! * 5.26315789473684
+                                let totalresult = newValor! + subresult
+                                if newValor! % 19 == 0 {
+                                    let a = String(format : "%.0f" , subresult)
+                                    let b = String(format : "%.0f", totalresult)
+                                    textSubt.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                else
+                                    {
+                                    let a = String(format : "%.2f" , subresult)
+                                    let b = String(format : "%.2f", totalresult)
+                                    textSubt.text = "\( a )"
+                                    textTotal.text = "\( b )"
+                                    }
+                                }
                             }
                         }
                     else
@@ -574,13 +628,7 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textTotal.text = "\( b )"
                                 }
                             }
-                        else
-                            {
-                            textTotal.text = ""
-                            textSubt.text = ""
-                            }
                         }
-                    
                     }
 
             case 3 :
@@ -598,26 +646,29 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                             let b = String(format : "%.0f", subresults)
                             textIGV.text = "\( a )"
                             textSubt.text = "\( b )"
-                        }
+                            }
                         else
-                        {
+                            {
                             let a = String(format : "%.2f", igbresult)
                             let b = String(format : "%.2f", subresults)
                             textIGV.text = "\( a )"
                             textSubt.text = "\( b )"
+                            }
                         }
-                    }
                     else
-                    {
+                        {
                         textSubt.text = ""
                         textIGV.text = ""
+                        }
                     }
-                }
                 else
-                {
+                    {
                     print(contArray[1])
                     let carac = [Character](contArray[1].characters)
                     print(carac)
+                    if  textTotal.text == "\(contArray[0]).." {
+                        textTotal.text = "\(contArray[0])."
+                        }
                     if  carac.count > 1 {
                         textTotal.text = "\(contArray[0]).\(carac[0])\(carac[1])"
                         if  let totalMonto = Double(textTotal.text!) {
@@ -636,11 +687,25 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textIGV.text = "\( a )"
                                 textSubt.text = "\( b )"
                                 }
-                            }
-                        else
-                            {
-                            textSubt.text = ""
-                            textIGV.text = ""
+                            if carac.count == 3 {
+                                textTotal.text = "\(contArray[0]).\(carac[0])\(carac[1])"
+                                let newValor = Double(textTotal.text!)
+                                let igbresult = newValor! * 0.15966386554622
+                                let subresults = newValor! - igbresult
+                                if newValor! % 119 == 0 {
+                                    let a = String(format : "%.0f", igbresult)
+                                    let b = String(format : "%.0f", subresults)
+                                    textIGV.text = "\( a )"
+                                    textSubt.text = "\( b )"
+                                    }
+                                else
+                                    {
+                                    let a = String(format : "%.2f", igbresult)
+                                    let b = String(format : "%.2f", subresults)
+                                    textIGV.text = "\( a )"
+                                    textSubt.text = "\( b )"
+                                    }
+                                }
                             }
                         }
                     else
@@ -661,11 +726,6 @@ class CalculadoraViewController: UIViewController, UIPickerViewDelegate, UIPicke
                                 textIGV.text = "\( a )"
                                 textSubt.text = "\( b )"
                                 }
-                            }
-                        else
-                            {
-                            textSubt.text = ""
-                            textIGV.text = ""
                             }
                         }
                     }
