@@ -10,6 +10,10 @@
 		00CFDA7E1C76EACD00F23EA6 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */; };
 		26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDCE1C726FCD002D912E /* WebViewController.swift */; };
 		26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDD01C727259002D912E /* ContactoViewController.swift */; };
+		26EFF0C31C77A49C00750A40 /* SourceSansPro_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C21C77A49C00750A40 /* SourceSansPro_Bold.ttf */; };
+		26EFF0C51C77A57A00750A40 /* SourceSansPro_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C41C77A57A00750A40 /* SourceSansPro_Light.ttf */; };
+		26EFF0C71C77A58600750A40 /* SourceSansPro_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C61C77A58600750A40 /* SourceSansPro_Regular.ttf */; };
+		26EFF0C91C77A59000750A40 /* SourceSansPro_Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C81C77A59000750A40 /* SourceSansPro_Semibold.ttf */; };
 		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
 		91FCFC421C6F996900EED667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC411C6F996900EED667 /* ViewController.swift */; };
 		91FCFC451C6F996900EED667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC431C6F996900EED667 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		26EFBDCE1C726FCD002D912E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		26EFBDD01C727259002D912E /* ContactoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
+		26EFF0C21C77A49C00750A40 /* SourceSansPro_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Bold.ttf; sourceTree = "<group>"; };
+		26EFF0C41C77A57A00750A40 /* SourceSansPro_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Light.ttf; sourceTree = "<group>"; };
+		26EFF0C61C77A58600750A40 /* SourceSansPro_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Regular.ttf; sourceTree = "<group>"; };
+		26EFF0C81C77A59000750A40 /* SourceSansPro_Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Semibold.ttf; sourceTree = "<group>"; };
 		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FCFC3F1C6F996900EED667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FCFC411C6F996900EED667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26EFF0C11C77A45200750A40 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				26EFF0C81C77A59000750A40 /* SourceSansPro_Semibold.ttf */,
+				26EFF0C61C77A58600750A40 /* SourceSansPro_Regular.ttf */,
+				26EFF0C41C77A57A00750A40 /* SourceSansPro_Light.ttf */,
+				26EFF0C21C77A49C00750A40 /* SourceSansPro_Bold.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		91FCFC331C6F996900EED667 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +137,7 @@
 		91FCFC3E1C6F996900EED667 /* IgvPeruApple */ = {
 			isa = PBXGroup;
 			children = (
+				26EFF0C11C77A45200750A40 /* Font */,
 				91FCFC721C6F999100EED667 /* Model */,
 				91FCFC711C6F998800EED667 /* View */,
 				91FCFC701C6F997900EED667 /* Controller */,
@@ -291,9 +311,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EFF0C71C77A58600750A40 /* SourceSansPro_Regular.ttf in Resources */,
 				91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */,
+				26EFF0C51C77A57A00750A40 /* SourceSansPro_Light.ttf in Resources */,
+				26EFF0C91C77A59000750A40 /* SourceSansPro_Semibold.ttf in Resources */,
 				91FCFC4D1C6F996900EED667 /* LaunchScreen.storyboard in Resources */,
 				91FCFC4A1C6F996900EED667 /* Assets.xcassets in Resources */,
+				26EFF0C31C77A49C00750A40 /* SourceSansPro_Bold.ttf in Resources */,
 				91FCFC451C6F996900EED667 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
