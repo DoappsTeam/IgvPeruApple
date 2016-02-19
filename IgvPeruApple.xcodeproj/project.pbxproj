@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CFDA7E1C76EACD00F23EA6 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */; };
 		26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDCE1C726FCD002D912E /* WebViewController.swift */; };
 		26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDD01C727259002D912E /* ContactoViewController.swift */; };
 		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
 		91FCFC421C6F996900EED667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC411C6F996900EED667 /* ViewController.swift */; };
 		91FCFC451C6F996900EED667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC431C6F996900EED667 /* Main.storyboard */; };
-		91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */; };
 		91FCFC4A1C6F996900EED667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC491C6F996900EED667 /* Assets.xcassets */; };
 		91FCFC4D1C6F996900EED667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC4B1C6F996900EED667 /* LaunchScreen.storyboard */; };
 		91FCFC581C6F996A00EED667 /* IgvPeruAppleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC571C6F996A00EED667 /* IgvPeruAppleTests.swift */; };
 		91FCFC631C6F996A00EED667 /* IgvPeruAppleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC621C6F996A00EED667 /* IgvPeruAppleUITests.swift */; };
 		91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */; };
 		91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */; };
-		91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */; };
 		91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC791C6FB1C800EED667 /* .gitignore */; };
+		EA41D0DA1C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA41D0D81C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld */; };
 		EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */; };
 		EA47D02B1C751AA000E0BAC4 /* FechasLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */; };
 		EA47D02D1C752F1500E0BAC4 /* IGVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */; };
@@ -44,13 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		26EFBDCE1C726FCD002D912E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		26EFBDD01C727259002D912E /* ContactoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FCFC3F1C6F996900EED667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FCFC411C6F996900EED667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91FCFC441C6F996900EED667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IgvPeruApple.xcdatamodel; sourceTree = "<group>"; };
 		91FCFC491C6F996900EED667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FCFC4C1C6F996900EED667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91FCFC4E1C6F996900EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		91FCFC641C6F996A00EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculadoraViewController.swift; sourceTree = "<group>"; };
 		91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
-		91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		91FCFC791C6FB1C800EED667 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		EA41D0D91C767D94004AE6C5 /* IgvPeruApple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IgvPeruApple.xcdatamodel; sourceTree = "<group>"; };
 		EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVPageViewController.swift; sourceTree = "<group>"; };
 		EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechasLine.swift; sourceTree = "<group>"; };
 		EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,9 +122,9 @@
 				91FCFC711C6F998800EED667 /* View */,
 				91FCFC701C6F997900EED667 /* Controller */,
 				91FCFC3F1C6F996900EED667 /* AppDelegate.swift */,
+				EA41D0D81C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld */,
 				91FCFC491C6F996900EED667 /* Assets.xcassets */,
 				91FCFC4E1C6F996900EED667 /* Info.plist */,
-				91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */,
 			);
 			path = IgvPeruApple;
 			sourceTree = "<group>";
@@ -151,13 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				91FCFC411C6F996900EED667 /* ViewController.swift */,
-				91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */,
+				EA41D0D71C767CF6004AE6C5 /* FirstVC */,
 				91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */,
-				91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */,
-				26EFBDCE1C726FCD002D912E /* WebViewController.swift */,
-				26EFBDD01C727259002D912E /* ContactoViewController.swift */,
 				EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */,
 				EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */,
+				00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +175,16 @@
 				EA47D02A1C751AA000E0BAC4 /* FechasLine.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EA41D0D71C767CF6004AE6C5 /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */,
+				26EFBDCE1C726FCD002D912E /* WebViewController.swift */,
+				26EFBDD01C727259002D912E /* ContactoViewController.swift */,
+			);
+			name = FirstVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,14 +322,14 @@
 				91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */,
 				26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */,
 				EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */,
-				91FCFC481C6F996900EED667 /* IgvPeruApple.xcdatamodeld in Sources */,
 				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
 				EA47D02B1C751AA000E0BAC4 /* FechasLine.swift in Sources */,
 				91FCFC421C6F996900EED667 /* ViewController.swift in Sources */,
 				EA47D02D1C752F1500E0BAC4 /* IGVTableViewCell.swift in Sources */,
 				26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */,
-				91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */,
+				EA41D0DA1C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld in Sources */,
 				91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */,
+				00CFDA7E1C76EACD00F23EA6 /* HistorialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,14 +577,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		91FCFC461C6F996900EED667 /* IgvPeruApple.xcdatamodeld */ = {
+		EA41D0D81C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */,
+				EA41D0D91C767D94004AE6C5 /* IgvPeruApple.xcdatamodel */,
 			);
-			currentVersion = 91FCFC471C6F996900EED667 /* IgvPeruApple.xcdatamodel */;
+			currentVersion = EA41D0D91C767D94004AE6C5 /* IgvPeruApple.xcdatamodel */;
 			path = IgvPeruApple.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
+var rucTemp = 0
 protocol CronogramaViewControllerDelegate{
-    func guardar(name: String,ruc : Int)
+    func guardar(name: String,ruc : String)
 }
 class CronogramaViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     lazy var fechasLine: FechasLine = {
@@ -18,6 +20,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     var meses2 = ["de Febrero","de Marzo","de Abril","de Mayo","de Junio","de Julio","de Agosto","de Septiembre","de Octubre","de Noviembre","de Diciembre","de Enero"]
     var ultimoDigito = 0
     //Variables
+    var cronogramaDelegate : CronogramaViewControllerDelegate? //Delegado
     @IBOutlet weak var tabla: UITableView!
     @IBOutlet weak var rucTF: UITextField!
     //Botones
@@ -26,10 +29,13 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     @IBOutlet weak var fechaRegular: UIButton!
     @IBOutlet weak var periodo: UIButton!
     @IBOutlet weak var guardarRucButton: UIButton!
-     var cronogramaDelegate : CronogramaViewControllerDelegate? //Delegado
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if rucTemp != 0{
+            rucTF.text = String(rucTemp)
+        }
         self.volverABuscarButton.hidden = true
         self.guardarRucButton.hidden = true
         self.periodo.hidden = true
@@ -70,8 +76,6 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         }else{
             print("ponga un ruc valido")
         }
-        
-        
     }
     
     // MARK: - Para toby
@@ -86,16 +90,20 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     
     @IBAction func saveRuc(sender: AnyObject) {
         print("guardar Ruc presionado")
-        let alertGuardar = UIAlertController(title: "Agregar RUC", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertGuardar = UIAlertController(title: "Guardar RUC", message: "Ponga el nombre", preferredStyle: UIAlertControllerStyle.Alert)
         alertGuardar.addTextFieldWithConfigurationHandler { (nombre) -> Void in
             nombre.placeholder = "Nombre"
-            guard let cad = nombre.text where cad != "" else{
-                return
-            }
         }
-        alertGuardar.addAction(UIAlertAction(title: "Guardar", style: UIAlertActionStyle.Default, handler: nil))
+        alertGuardar.addAction(UIAlertAction(title: "Guardar", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            let tf = alertGuardar.textFields![0]
+            let name = tf.text!
+            let ruc = self.rucTF.text!
+            if self.cronogramaDelegate != nil{
+                self.cronogramaDelegate?.guardar(name, ruc: ruc)
+            }
+            
+        }))
         presentViewController(alertGuardar, animated: true, completion: nil)
-        
     }
     //MARK: - Datasource table methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{

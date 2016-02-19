@@ -11,11 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     //Variables
     @IBOutlet weak var segmento: UISegmentedControl!
-    var igvPageViewController: IGVPageViewController?{
-        didSet{
-             igvPageViewController?.pageDelegate = self
-        }
-    }
+    var igvPageViewController: IGVPageViewController?
     
     // MARK : init
     override func viewDidLoad() {
@@ -24,8 +20,11 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let igvPVC = segue.destinationViewController as? IGVPageViewController {
-            self.igvPageViewController = igvPVC
+        if segue.identifier == "page"{
+            if let pageVC = segue.destinationViewController as? IGVPageViewController{
+                self.igvPageViewController = pageVC
+                self.igvPageViewController?.pageDelegate = self
+            }
         }
     }
     
