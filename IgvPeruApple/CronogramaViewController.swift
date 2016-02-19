@@ -73,6 +73,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
             self.tabla.hidden = false
             self.volverABuscarButton.hidden = false
             self.guardarRucButton.hidden = false
+            self.buscarButton.hidden = true
         }else{
             print("ponga un ruc valido")
         }
@@ -105,6 +106,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         }))
         presentViewController(alertGuardar, animated: true, completion: nil)
     }
+    
     //MARK: - Datasource table methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return 12
