@@ -48,6 +48,8 @@ class IGVPageViewController: UIPageViewController {
             // any delegate methods, so we have to manually notify the
             // 'tutorialDelegate' of the new index.
             self.notifyDelegateOfNewIndex()
+            (viewController as! HistorialViewController).historialDelegate = self
+            
         })
         
     }
@@ -57,6 +59,8 @@ class IGVPageViewController: UIPageViewController {
             // any delegate methods, so we have to manually notify the
             // 'tutorialDelegate' of the new index.
             self.notifyDelegateOfNewIndex()
+             (viewController as! CronogramaViewController).cronogramaDelegate = self
+            
         })
     }
 
