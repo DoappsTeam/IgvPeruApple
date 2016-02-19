@@ -18,7 +18,6 @@ class HistorialViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,6 +27,7 @@ class HistorialViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "Users")
@@ -72,7 +72,18 @@ class HistorialViewController: UITableViewController {
             self.historialDelegate?.ruc(ruc)
         }
     }
-
+    //MARK: - Customize table methods
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+        return 30
+    }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+        return 20
+    }
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+        let v = UIView()
+        v.backgroundColor = UIColor.redColor()//rojo el background
+        return v
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -85,6 +96,29 @@ class HistorialViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
+            let user = users[indexPath.row]
+            users.removeAtIndex(indexPath.row)
+            let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDel.managedObjectContext
+            let request = NSFetchRequest(entityName: "Users")
+            do {
+                let results = try context.executeFetchRequest(request) as! [NSManagedObject]
+                for result in results{
+                    if user.valueForKey("name") as! String == result.valueForKey("name") as! String && user.valueForKey("ruc") as! String == result.valueForKey("ruc") as! String{
+                        context.deleteObject(result)
+                        do {
+                            try context.save()
+                           
+                        } catch let error as NSError  {
+                            print("Could not save \(error), \(error.userInfo)")
+                        }
+                    }
+                }
+            } catch let error as NSError {
+                print("Could not fetch \(error), \(error.userInfo)")
+            }
+    
+            
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
