@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+var rucTemp = 0
 protocol CronogramaViewControllerDelegate{
     func guardar(name: String,ruc : String)
 }
@@ -32,6 +33,9 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if rucTemp != 0{
+            rucTF.text = String(rucTemp)
+        }
         self.volverABuscarButton.hidden = true
         self.guardarRucButton.hidden = true
         self.periodo.hidden = true

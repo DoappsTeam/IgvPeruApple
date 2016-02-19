@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CFDA7E1C76EACD00F23EA6 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */; };
 		26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDCE1C726FCD002D912E /* WebViewController.swift */; };
 		26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EFBDD01C727259002D912E /* ContactoViewController.swift */; };
 		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
@@ -18,7 +19,6 @@
 		91FCFC631C6F996A00EED667 /* IgvPeruAppleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC621C6F996A00EED667 /* IgvPeruAppleUITests.swift */; };
 		91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */; };
 		91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */; };
-		91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */; };
 		91FCFC7A1C6FB1C800EED667 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC791C6FB1C800EED667 /* .gitignore */; };
 		EA41D0DA1C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA41D0D81C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld */; };
 		EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */; };
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		26EFBDCE1C726FCD002D912E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		26EFBDD01C727259002D912E /* ContactoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactoViewController.swift; sourceTree = "<group>"; };
 		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +62,6 @@
 		91FCFC641C6F996A00EED667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91FCFC731C6F9ECC00EED667 /* CalculadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculadoraViewController.swift; sourceTree = "<group>"; };
 		91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CronogramaViewController.swift; sourceTree = "<group>"; };
-		91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
 		91FCFC791C6FB1C800EED667 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EA41D0D91C767D94004AE6C5 /* IgvPeruApple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IgvPeruApple.xcdatamodel; sourceTree = "<group>"; };
 		EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGVPageViewController.swift; sourceTree = "<group>"; };
@@ -153,9 +153,9 @@
 				91FCFC411C6F996900EED667 /* ViewController.swift */,
 				EA41D0D71C767CF6004AE6C5 /* FirstVC */,
 				91FCFC751C6F9EEC00EED667 /* CronogramaViewController.swift */,
-				91FCFC771C6F9F0100EED667 /* HistorialViewController.swift */,
 				EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */,
 				EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */,
+				00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,8 +328,8 @@
 				EA47D02D1C752F1500E0BAC4 /* IGVTableViewCell.swift in Sources */,
 				26EFBDCF1C726FCD002D912E /* WebViewController.swift in Sources */,
 				EA41D0DA1C767D94004AE6C5 /* IgvPeruApple.xcdatamodeld in Sources */,
-				91FCFC781C6F9F0100EED667 /* HistorialViewController.swift in Sources */,
 				91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */,
+				00CFDA7E1C76EACD00F23EA6 /* HistorialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

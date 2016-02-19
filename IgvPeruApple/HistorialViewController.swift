@@ -2,47 +2,120 @@
 //  HistorialViewController.swift
 //  IgvPeruApple
 //
-//  Created by DoApps on 2/13/16.
+//  Created by ayrton toledo on 19/02/16.
 //  Copyright © 2016 DoApps. All rights reserved.
 //
 
 import UIKit
 import CoreData
-class HistorialViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    var data = [NSManagedObject]()
-    @IBOutlet weak var tabla: UITableView!
+protocol HistorialViewControllerDelegate{
+    func ruc(ruc: String)
+}
+var users = [NSManagedObject]()
+class HistorialViewController: UITableViewController {
+    //Variables
+    var historialDelegate : HistorialViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.data)
-        // Do any additional setup after loading the view.
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appDel.managedObjectContext
         let request = NSFetchRequest(entityName: "Users")
-        do{
-            let result = try context.executeFetchRequest(request)
-            data = result as! [NSManagedObject]
-        }catch let error as NSError {
-            print(error.description)
+        do {
+            let results = try context.executeFetchRequest(request)
+            users = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
         }
+        
     }
-    //MARK: - DataSource methods
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return users.count
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         return 1
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tabla.dequeueReusableCellWithIdentifier("cell historial", forIndexPath: indexPath)
-        cell.textLabel?.text = "hola"
-        return cell
-    }
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
-        let user = data[section]
-        let name = valueForKey("name") as! String
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        let user = users[section]
+        let name = user.valueForKey("name") as! String
         return name.uppercaseString
     }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
-        return data.count
+    
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell historial", forIndexPath: indexPath)
+        let user = users[indexPath.section]
+        let ruc = user.valueForKey("ruc") as! String
+        cell.textLabel?.text = ruc
+        return cell
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let user = users[indexPath.section]
+        let ruc = user.valueForKey("ruc") as! String
+        if historialDelegate != nil{
+            self.historialDelegate?.ruc(ruc)
+        }
+    }
+
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
