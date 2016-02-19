@@ -74,9 +74,15 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         
     }
     
+    // MARK: - Para toby
     @IBAction func restartSearch(sender: AnyObject) {
         print("volver a buscar presionado")
+       
     }
+    
+    
+    
+    
     
     @IBAction func saveRuc(sender: AnyObject) {
         print("guardar Ruc presionado")
