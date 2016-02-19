@@ -78,7 +78,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         }
     }
     
-    // MARK: - Para toby
+    // MARK: -  Volver a buscar
     @IBAction func restartSearch(sender: AnyObject) {
         print("volver a buscar presionado")
        
