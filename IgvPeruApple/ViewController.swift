@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         //self.navigationController?.navigationBar.barTintColor = UIColor(red: 25/255, green: 117/255, blue: 146/255, alpha: 1.0)
         let imageNav:UIImage = UIImage(named: "button_background")!
         self.navigationController?.navigationBar.setBackgroundImage(imageNav, forBarMetrics: .Default)
+        
+        let imageTitle = UIImageView(image: UIImage(named: "img_header"))
+        self.navigationItem.titleView = imageTitle
     }
 }
 

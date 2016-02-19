@@ -79,11 +79,12 @@ class HistorialViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         return 20
     }
+    /*Esto cambia el background del section
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
         let v = UIView()
         v.backgroundColor = UIColor.redColor()//rojo el background
         return v
-    }
+    }*/
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
