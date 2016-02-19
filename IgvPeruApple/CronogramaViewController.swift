@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreData
+
 var rucTemp = 0
 protocol CronogramaViewControllerDelegate{
     func guardar(name: String,ruc : String)
 }
+    
 class CronogramaViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     lazy var fechasLine: FechasLine = {
         return FechasLine.fillData()
@@ -26,10 +28,8 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     //Botones
     @IBOutlet weak var volverABuscarButton: UIButton!
     @IBOutlet weak var buscarButton: UIButton!
-    @IBOutlet weak var fechaRegular: UIButton!
     @IBOutlet weak var periodo: UIButton!
     @IBOutlet weak var guardarRucButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,6 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         self.volverABuscarButton.hidden = true
         self.guardarRucButton.hidden = true
         self.periodo.hidden = true
-        self.fechaRegular.hidden = true
         self.tabla.hidden = true
         // Do any additional setup after loading the view.
     }
@@ -74,6 +73,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
             self.volverABuscarButton.hidden = false
             self.guardarRucButton.hidden = false
             self.buscarButton.hidden = true
+            self.periodo.hidden = false
         }else{
             print("ponga un ruc valido")
         }
@@ -82,7 +82,13 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     // MARK: - Para toby
     @IBAction func restartSearch(sender: AnyObject) {
         print("volver a buscar presionado")
-       
+        
+        self.buscarButton.hidden = false
+        self.guardarRucButton.hidden = true
+        self.tabla.hidden = true
+        self.volverABuscarButton.hidden = true
+        self.periodo.hidden = true
+        self.rucTF.text = ""
     }
     
     

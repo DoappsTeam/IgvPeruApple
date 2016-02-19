@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     // MARK : init
     override func viewDidLoad() {
         super.viewDidLoad()
-        customNavigation()
+        customNavigationBar()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -29,9 +29,10 @@ class ViewController: UIViewController {
     }
     
     // MARK : Custom Navigation Bar
-    func customNavigation(){
+    func customNavigationBar(){
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         //self.navigationController?.navigationBar.barTintColor = UIColor(red: 25/255, green: 117/255, blue: 146/255, alpha: 1.0)
+        
         let imageNav:UIImage = UIImage(named: "button_background")!
         self.navigationController?.navigationBar.setBackgroundImage(imageNav, forBarMetrics: .Default)
         

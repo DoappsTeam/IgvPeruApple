@@ -131,3 +131,18 @@ extension IGVPageViewController: HistorialViewControllerDelegate{
         }
     }
 }
+
+// MARK : Validate Existing Row
+func recordExist(ruc: String) -> Bool{
+    var history = [NSManagedObject]()
+    let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    let context: NSManagedObjectContext = appDel.managedObjectContext
+    let request = NSFetchRequest(entityName: "Users")
+    do {
+        let results = try context.executeFetchRequest(request)
+        history = results as! [NSManagedObject]
+    } catch let error as NSError {
+        print("Could not fetch \(error), \(error.userInfo)")
+    }
+    return true
+}
