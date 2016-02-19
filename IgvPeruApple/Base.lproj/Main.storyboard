@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -448,7 +448,7 @@
                                     <action selector="search:" destination="9JT-60-cve" eventType="touchUpInside" id="9Wd-Wv-ZJX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-fb-UEA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-fb-UEA">
                                 <rect key="frame" x="251" y="87" width="104" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -463,7 +463,7 @@
                                     <action selector="saveRuc:" destination="9JT-60-cve" eventType="touchUpInside" id="oF6-85-J8A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rs-Op-mjt">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rs-Op-mjt">
                                 <rect key="frame" x="20" y="87" width="105" height="31"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -490,7 +490,7 @@
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PoU-rA-vDg" id="frK-tD-wde">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 de Febrero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-lv-90L">
@@ -534,11 +534,14 @@
                         <constraints>
                             <constraint firstItem="N8M-Gm-mQi" firstAttribute="top" secondItem="5Rs-Op-mjt" secondAttribute="bottom" constant="18" id="1tg-XS-Cws"/>
                             <constraint firstItem="5Rs-Op-mjt" firstAttribute="leading" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="3FK-j5-eqx"/>
+                            <constraint firstItem="5Rs-Op-mjt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="4S9-HR-Iyk"/>
                             <constraint firstItem="Vg6-xs-vuj" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="7Ug-ev-R1l"/>
                             <constraint firstItem="N8M-Gm-mQi" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="Ain-tc-GRp"/>
                             <constraint firstItem="5Rs-Op-mjt" firstAttribute="top" secondItem="Vg6-xs-vuj" secondAttribute="bottom" constant="8" id="BgV-ld-049"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="top" secondItem="N8M-Gm-mQi" secondAttribute="bottom" id="Jb1-Td-fhA"/>
                             <constraint firstItem="GiI-Hc-2oH" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="MLg-Km-RWI"/>
+                            <constraint firstItem="jR7-fb-UEA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8um-WJ-1ic" secondAttribute="trailingMargin" id="OoO-M6-57z"/>
+                            <constraint firstItem="jR7-fb-UEA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5Rs-Op-mjt" secondAttribute="trailing" constant="126" id="PHd-NK-FLx"/>
                             <constraint firstItem="Vg6-xs-vuj" firstAttribute="top" secondItem="GiI-Hc-2oH" secondAttribute="bottom" constant="8" id="W2v-pN-odk"/>
                             <constraint firstItem="jR7-fb-UEA" firstAttribute="trailing" secondItem="8um-WJ-1ic" secondAttribute="trailingMargin" id="XK5-gJ-20k"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="dtP-uT-RvH"/>
@@ -547,6 +550,12 @@
                             <constraint firstItem="nNp-fV-h6b" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="sLF-0V-ySS"/>
                             <constraint firstItem="GiI-Hc-2oH" firstAttribute="top" secondItem="iO7-de-TlZ" secondAttribute="bottom" constant="20" id="xLA-Au-4qh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3FK-j5-eqx"/>
+                                <exclude reference="XK5-gJ-20k"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -575,7 +584,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qwn-10-jf6" id="daH-pU-9Di">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
