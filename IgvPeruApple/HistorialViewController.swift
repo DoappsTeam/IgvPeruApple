@@ -7,29 +7,42 @@
 //
 
 import UIKit
-
-class HistorialViewController: UIViewController {
-
+import CoreData
+class HistorialViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    var data = [NSManagedObject]()
+    @IBOutlet weak var tabla: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(self.data)
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        let request = NSFetchRequest(entityName: "Users")
+        do{
+            let result = try context.executeFetchRequest(request)
+            data = result as! [NSManagedObject]
+        }catch let error as NSError {
+            print(error.description)
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - DataSource methods
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return 1
     }
-    */
-
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        let cell = tabla.dequeueReusableCellWithIdentifier("cell historial", forIndexPath: indexPath)
+        cell.textLabel?.text = "hola"
+        return cell
+    }
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        let user = data[section]
+        let name = valueForKey("name") as! String
+        return name.uppercaseString
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+        return data.count
+    }
 }
