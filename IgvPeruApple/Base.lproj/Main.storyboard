@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -13,7 +13,17 @@
             <string>SourceSansPro-Light</string>
             <string>SourceSansPro-Light</string>
         </mutableArray>
+        <mutableArray key="SourceSansPro_Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+        </mutableArray>
         <mutableArray key="SourceSansPro_Semibold.ttf">
+            <string>SourceSansPro-Semibold</string>
+            <string>SourceSansPro-Semibold</string>
+            <string>SourceSansPro-Semibold</string>
+            <string>SourceSansPro-Semibold</string>
             <string>SourceSansPro-Semibold</string>
             <string>SourceSansPro-Semibold</string>
             <string>SourceSansPro-Semibold</string>
@@ -90,7 +100,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ie4-Q2-ujx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2665" y="1069"/>
+            <point key="canvasLocation" x="2708" y="1117"/>
         </scene>
         <!--Contacto View Controller-->
         <scene sceneID="CMj-2Z-gPw">
@@ -229,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjx-eB-oxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3755.5" y="360.5"/>
+            <point key="canvasLocation" x="3803.5" y="360.5"/>
         </scene>
         <!--Calculadora View Controller-->
         <scene sceneID="TOa-h3-te5">
@@ -408,16 +418,27 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8M-Gm-mQi">
                                 <rect key="frame" x="20" y="136" width="335" height="24"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="GsE-E6-uhs"/>
+                                    <constraint firstAttribute="width" constant="335" id="eaC-OM-bzC"/>
                                     <constraint firstAttribute="width" constant="335" id="jSe-vX-xBn"/>
-                                    <constraint firstAttribute="height" constant="24" id="u0t-Ib-Vrn"/>
+                                    <constraint firstAttribute="height" constant="24" id="s5n-lV-k3z"/>
+                                    <constraint firstAttribute="height" constant="30" id="u0t-Ib-Vrn"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="15"/>
                                 <state key="normal" title="PERIODO                 FECHA REGULAR" backgroundImage="button_background">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eaC-OM-bzC"/>
+                                        <exclude reference="jSe-vX-xBn"/>
+                                        <exclude reference="u0t-Ib-Vrn"/>
+                                    </mask>
+                                </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Numero de RUC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-Hc-2oH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Número de RUC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiI-Hc-2oH">
                                 <rect key="frame" x="125" y="20" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -427,7 +448,7 @@
                                     <constraint firstAttribute="width" constant="220" id="FFB-qa-6uw"/>
                                     <constraint firstAttribute="height" constant="30" id="anr-l9-26A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="rucTFChanged:" destination="9JT-60-cve" eventType="editingChanged" id="p3c-5u-Vja"/>
@@ -440,7 +461,7 @@
                                     <constraint firstAttribute="width" constant="110" id="Beg-GM-Emc"/>
                                     <constraint firstAttribute="height" constant="31" id="I5k-Gh-8TS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="12"/>
                                 <state key="normal" title="BUSCAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -455,7 +476,7 @@
                                     <constraint firstAttribute="height" constant="31" id="0tE-98-EM6"/>
                                     <constraint firstAttribute="width" constant="104" id="ogl-r3-Dyq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="12"/>
                                 <state key="normal" title="GUARDAR RUC">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -470,7 +491,7 @@
                                     <constraint firstAttribute="height" constant="31" id="8Yx-eV-TBZ"/>
                                     <constraint firstAttribute="width" constant="105" id="kcL-mx-fb3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="12"/>
                                 <state key="normal" title="VOLVER A BUSCAR">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -478,11 +499,11 @@
                                     <action selector="restartSearch:" destination="9JT-60-cve" eventType="touchUpInside" id="FxJ-w0-Zl8"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-iX-ceV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-iX-ceV">
                                 <rect key="frame" x="20" y="156" width="335" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="335" id="F2g-uv-xr3"/>
+                                    <constraint firstAttribute="width" constant="295" id="F2g-uv-xr3"/>
                                     <constraint firstAttribute="height" constant="511" id="LiS-4b-Bn3"/>
                                 </constraints>
                                 <prototypes>
@@ -490,34 +511,60 @@
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PoU-rA-vDg" id="frK-tD-wde">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 de Febrero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-lv-90L">
-                                                    <rect key="frame" x="181" y="11" width="146" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENERO 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-aa-thT">
-                                                    <rect key="frame" x="8" y="11" width="146" height="21"/>
+                                                    <rect key="frame" x="18" y="11" width="146" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="146" id="WwB-1P-5bo"/>
                                                         <constraint firstAttribute="width" constant="146" id="rOU-BB-bnq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="rOU-BB-bnq"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19 de Febrero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-lv-90L">
+                                                    <rect key="frame" x="171" y="11" width="146" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="146" id="0Vu-0b-Edt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="5bW-aa-thT" firstAttribute="top" secondItem="frK-tD-wde" secondAttribute="topMargin" constant="3" id="2uo-aI-sM9"/>
+                                                <constraint firstItem="5bW-aa-thT" firstAttribute="firstBaseline" secondItem="KdC-lv-90L" secondAttribute="firstBaseline" id="5j2-NJ-Tca"/>
                                                 <constraint firstItem="5bW-aa-thT" firstAttribute="top" secondItem="frK-tD-wde" secondAttribute="topMargin" constant="3" id="A4o-nl-yu9"/>
                                                 <constraint firstItem="5bW-aa-thT" firstAttribute="firstBaseline" secondItem="KdC-lv-90L" secondAttribute="firstBaseline" id="Dk8-gT-byx"/>
+                                                <constraint firstItem="5bW-aa-thT" firstAttribute="baseline" secondItem="KdC-lv-90L" secondAttribute="baseline" id="IWk-Aa-uGj"/>
+                                                <constraint firstItem="5bW-aa-thT" firstAttribute="centerY" secondItem="frK-tD-wde" secondAttribute="centerY" id="JuL-G2-jAC"/>
+                                                <constraint firstItem="5bW-aa-thT" firstAttribute="leading" secondItem="frK-tD-wde" secondAttribute="leadingMargin" constant="10" id="cwh-Ce-Tlw"/>
                                                 <constraint firstItem="5bW-aa-thT" firstAttribute="baseline" secondItem="KdC-lv-90L" secondAttribute="baseline" id="ecf-hz-JJ2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KdC-lv-90L" secondAttribute="trailing" constant="10" id="mlT-0o-oVO"/>
                                                 <constraint firstItem="KdC-lv-90L" firstAttribute="leading" secondItem="5bW-aa-thT" secondAttribute="trailing" constant="27" id="nHx-Jd-AA7"/>
                                                 <constraint firstItem="5bW-aa-thT" firstAttribute="leading" secondItem="frK-tD-wde" secondAttribute="leadingMargin" id="qgZ-Bp-jbV"/>
                                                 <constraint firstItem="KdC-lv-90L" firstAttribute="trailing" secondItem="frK-tD-wde" secondAttribute="trailingMargin" id="vqO-PR-h9Y"/>
                                                 <constraint firstItem="KdC-lv-90L" firstAttribute="centerY" secondItem="frK-tD-wde" secondAttribute="centerY" id="zVJ-KY-r4q"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="A4o-nl-yu9"/>
+                                                    <exclude reference="Dk8-gT-byx"/>
+                                                    <exclude reference="ecf-hz-JJ2"/>
+                                                    <exclude reference="qgZ-Bp-jbV"/>
+                                                    <exclude reference="nHx-Jd-AA7"/>
+                                                    <exclude reference="vqO-PR-h9Y"/>
+                                                    <exclude reference="zVJ-KY-r4q"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="fechaDePago" destination="KdC-lv-90L" id="wnA-T0-aoM"/>
@@ -553,6 +600,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="3FK-j5-eqx"/>
+                                <exclude reference="PHd-NK-FLx"/>
                                 <exclude reference="XK5-gJ-20k"/>
                             </mask>
                         </variation>
@@ -584,7 +632,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qwn-10-jf6" id="daH-pU-9Di">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
