@@ -428,7 +428,7 @@
                                     <constraint firstAttribute="height" constant="30" id="u0t-Ib-Vrn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="15"/>
-                                <state key="normal" title="PERIODO                 FECHA REGULAR" backgroundImage="button_background">
+                                <state key="normal" title="            PERIODO          FECHA REGULAR" backgroundImage="button_background">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
@@ -674,8 +674,8 @@
     <resources>
         <image name="background_splash" width="768" height="1360"/>
         <image name="button_background" width="797" height="241"/>
-        <image name="ic_info" width="56" height="56"/>
-        <image name="ic_share" width="56" height="56"/>
+        <image name="ic_info" width="24" height="24"/>
+        <image name="ic_share" width="34" height="34"/>
         <image name="img_about" width="520" height="152"/>
         <image name="watermaker_doapps" width="450" height="450"/>
     </resources>
