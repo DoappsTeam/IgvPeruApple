@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     //Variables
     @IBOutlet weak var segmento: UISegmentedControl!
     var igvPageViewController: IGVPageViewController?
-    
+    var actual = 0
     // MARK : init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,32 @@ class ViewController: UIViewController {
                 self.igvPageViewController = pageVC
                 self.igvPageViewController?.pageDelegate = self
             }
+        }
+    }
+    //MARK: - SegmentoChanged
+    
+    @IBAction func segmentoChanged(sender: UISegmentedControl) {
+        let toPage = sender.selectedSegmentIndex
+        print("toPage",toPage)
+        if toPage == 0 && toPage != actual{
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("calculadora")
+            igvPageViewController!.setViewControllers([vc!], direction: .Reverse, animated: true, completion: nil)
+            igvPageViewController?.notifyDelegateOfNewIndex()
+        }else if toPage == 1 && toPage != actual && actual == 0{
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("cronograma")
+            igvPageViewController!.setViewControllers([vc!], direction: .Forward, animated: true, completion: nil)
+            (vc as! CronogramaViewController).cronogramaDelegate = self.igvPageViewController
+            igvPageViewController?.notifyDelegateOfNewIndex()
+        }else if toPage == 1 && toPage != actual && actual == 2{
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("cronograma")
+            igvPageViewController!.setViewControllers([vc!], direction: .Reverse, animated: true, completion: nil)
+            (vc as! CronogramaViewController).cronogramaDelegate = self.igvPageViewController
+            igvPageViewController?.notifyDelegateOfNewIndex()
+        }else if toPage == 2 && toPage != actual{
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("historial")
+            igvPageViewController!.setViewControllers([vc!], direction: .Forward, animated: true, completion: nil)
+            (vc as! HistorialViewController).historialDelegate = self.igvPageViewController
+            igvPageViewController?.notifyDelegateOfNewIndex()
         }
     }
     
@@ -45,6 +71,8 @@ class ViewController: UIViewController {
 extension ViewController: IGVPageViewControllerDelegate{
     func pageViewController(pageViewController: UIPageViewController, didUpdatePageIndex index: Int) {
         self.segmento.selectedSegmentIndex = index
+        self.actual = index
+        print("actual",self.actual)
     }
 }
 
