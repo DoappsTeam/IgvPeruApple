@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    //MARK: - SegmentoChanged
+    //MARK: - SegmentoChanged solo escribo esto para comitear
     
     @IBAction func segmentoChanged(sender: UISegmentedControl) {
         let toPage = sender.selectedSegmentIndex
