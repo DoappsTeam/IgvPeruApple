@@ -14,6 +14,7 @@ protocol IGVPageViewControllerDelegate{
 
 class IGVPageViewController: UIPageViewController {
     //Variables
+    var rucQueSeManda = ""
     var pages = ["calculadora","cronograma","historial"] //Storyboard ids
     var pageDelegate: IGVPageViewControllerDelegate? //Delegado
 
@@ -60,11 +61,19 @@ class IGVPageViewController: UIPageViewController {
             // 'tutorialDelegate' of the new index.
             self.notifyDelegateOfNewIndex()
              (viewController as! CronogramaViewController).cronogramaDelegate = self
-            
+            (viewController as! CronogramaViewController).rucTF.text = self.rucQueSeManda
+            let cadena = [Character](self.rucQueSeManda.characters)
+            let ultimoChar = cadena[cadena.count - 1]
+            let ultimoString = Int(String(ultimoChar))
+            (viewController as! CronogramaViewController).ultimoDigito = ultimoString!
+            (viewController as! CronogramaViewController).rucTF.enabled = false
+            (viewController as! CronogramaViewController).tabla.hidden = false
+            (viewController as! CronogramaViewController).volverABuscarButton.hidden = false
+            (viewController as! CronogramaViewController).guardarRucButton.hidden = false
+            (viewController as! CronogramaViewController).periodo.hidden = false
+            (viewController as! CronogramaViewController).buscarButton.hidden = true
         })
     }
-
-
 }
 //MARK: - DataSource methods
 extension IGVPageViewController: UIPageViewControllerDataSource{
@@ -125,7 +134,7 @@ extension IGVPageViewController: CronogramaViewControllerDelegate{
 extension IGVPageViewController: HistorialViewControllerDelegate{
     func ruc(ruc: String) {
         print("protocolo recibido",ruc)
-        rucTemp = Int(ruc)!
+        self.rucQueSeManda = ruc
         if let cron = storyboard?.instantiateViewControllerWithIdentifier("cronograma"){
             scrollToBackViewController(cron)
         }
