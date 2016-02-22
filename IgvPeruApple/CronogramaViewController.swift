@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-var rucTemp = 0
+
 protocol CronogramaViewControllerDelegate{
     func guardar(name: String,ruc : String)
 }
@@ -33,9 +33,6 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if rucTemp != 0{
-            rucTF.text = String(rucTemp)
-        }
         self.volverABuscarButton.hidden = true
         self.guardarRucButton.hidden = true
         self.periodo.hidden = true
@@ -64,9 +61,11 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
         let cadena = [Character](tf.characters)
         let count = cadena.count
         if count == 11{
-            let IntegerArray = Int(tf)
-            let ultimoDigito = IntegerArray! % 10
-            self.ultimoDigito = ultimoDigito
+             self.rucTF.enabled = false
+            let ultimoChar = cadena[cadena.count - 1]
+            print(ultimoChar)
+            let ultimoString = Int(String(ultimoChar))
+            self.ultimoDigito = ultimoString!
             self.rucTF.resignFirstResponder()
             self.tabla.reloadData()
             self.tabla.hidden = false
@@ -82,7 +81,7 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     // MARK: -  Volver a buscar
     @IBAction func restartSearch(sender: AnyObject) {
         print("volver a buscar presionado")
-        
+        self.rucTF.enabled = true
         self.buscarButton.hidden = false
         self.guardarRucButton.hidden = true
         self.tabla.hidden = true
@@ -97,6 +96,11 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
     
     @IBAction func saveRuc(sender: AnyObject) {
         print("guardar Ruc presionado")
+        for user in users{
+            if  self.rucTF.text == user.valueForKey("ruc") as! String{
+                return
+            }
+        }
         let alertGuardar = UIAlertController(title: "Guardar RUC", message: "Ponga el nombre", preferredStyle: UIAlertControllerStyle.Alert)
         alertGuardar.addTextFieldWithConfigurationHandler { (nombre) -> Void in
             nombre.placeholder = "Nombre"
@@ -110,6 +114,13 @@ class CronogramaViewController: UIViewController,UITableViewDataSource,UITableVi
             }
             
         }))
+        // adding the notification observer here
+        NSNotificationCenter.defaultCenter().addObserverForName(UITextFieldTextDidChangeNotification, object:alertGuardar.textFields![0],queue: NSOperationQueue.mainQueue()) { (notification) -> Void in
+                let textFieldName = alertGuardar.textFields![0] as! UITextField
+                alertGuardar.actions.first!.enabled = !textFieldName.text!.isEmpty
+        }
+        alertGuardar.actions.first?.enabled = false
+        alertGuardar.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Cancel, handler: nil))
         presentViewController(alertGuardar, animated: true, completion: nil)
     }
     
