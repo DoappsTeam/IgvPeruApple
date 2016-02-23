@@ -14,6 +14,7 @@
 		26EFF0C51C77A57A00750A40 /* SourceSansPro_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C41C77A57A00750A40 /* SourceSansPro_Light.ttf */; };
 		26EFF0C71C77A58600750A40 /* SourceSansPro_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C61C77A58600750A40 /* SourceSansPro_Regular.ttf */; };
 		26EFF0C91C77A59000750A40 /* SourceSansPro_Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26EFF0C81C77A59000750A40 /* SourceSansPro_Semibold.ttf */; };
+		26F9ADCF1C7BD58C00D82C7E /* SunatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F9ADCE1C7BD58C00D82C7E /* SunatViewController.swift */; };
 		91FCFC401C6F996900EED667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC3F1C6F996900EED667 /* AppDelegate.swift */; };
 		91FCFC421C6F996900EED667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCFC411C6F996900EED667 /* ViewController.swift */; };
 		91FCFC451C6F996900EED667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FCFC431C6F996900EED667 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		26EFF0C41C77A57A00750A40 /* SourceSansPro_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Light.ttf; sourceTree = "<group>"; };
 		26EFF0C61C77A58600750A40 /* SourceSansPro_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Regular.ttf; sourceTree = "<group>"; };
 		26EFF0C81C77A59000750A40 /* SourceSansPro_Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SourceSansPro_Semibold.ttf; sourceTree = "<group>"; };
+		26F9ADCE1C7BD58C00D82C7E /* SunatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunatViewController.swift; sourceTree = "<group>"; };
 		91FCFC3C1C6F996900EED667 /* IgvPeruApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IgvPeruApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FCFC3F1C6F996900EED667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FCFC411C6F996900EED667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				EA47D0241C7504EB00E0BAC4 /* IGVPageViewController.swift */,
 				EA47D02C1C752F1500E0BAC4 /* IGVTableViewCell.swift */,
 				00CFDA7D1C76EACD00F23EA6 /* HistorialViewController.swift */,
+				26F9ADCE1C7BD58C00D82C7E /* SunatViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				91FCFC741C6F9ECC00EED667 /* CalculadoraViewController.swift in Sources */,
 				26EFBDD11C727259002D912E /* ContactoViewController.swift in Sources */,
+				26F9ADCF1C7BD58C00D82C7E /* SunatViewController.swift in Sources */,
 				EA47D0251C7504EB00E0BAC4 /* IGVPageViewController.swift in Sources */,
 				91FCFC761C6F9EEC00EED667 /* CronogramaViewController.swift in Sources */,
 				EA47D02B1C751AA000E0BAC4 /* FechasLine.swift in Sources */,

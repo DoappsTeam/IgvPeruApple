@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -14,6 +14,7 @@
             <string>SourceSansPro-Light</string>
         </mutableArray>
         <mutableArray key="SourceSansPro_Regular.ttf">
+            <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
@@ -505,7 +506,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-iX-ceV">
-                                <rect key="frame" x="20" y="156" width="335" height="491"/>
+                                <rect key="frame" x="20" y="156" width="335" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="F2g-uv-xr3"/>
@@ -588,20 +589,41 @@
                                     <outlet property="delegate" destination="9JT-60-cve" id="8X3-Lp-JQF"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbr-qK-3Zu">
+                                <rect key="frame" x="263" y="609" width="12" height="33"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="1" green="0.0070333078939999998" blue="0.1278967882" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYV-XD-yzc">
+                                <rect key="frame" x="112" y="609" width="153" height="28"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                <state key="normal" title="Ver cronograma oficial SUNAT ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B0U-Hj-ekr" kind="show" id="Qcs-8G-am9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mbr-qK-3Zu" secondAttribute="trailing" constant="25" id="1V1-W9-uBC"/>
                             <constraint firstItem="N8M-Gm-mQi" firstAttribute="top" secondItem="5Rs-Op-mjt" secondAttribute="bottom" constant="18" id="1tg-XS-Cws"/>
                             <constraint firstItem="5Rs-Op-mjt" firstAttribute="leading" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="3FK-j5-eqx"/>
                             <constraint firstItem="5Rs-Op-mjt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="4S9-HR-Iyk"/>
                             <constraint firstItem="Vg6-xs-vuj" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="7Ug-ev-R1l"/>
                             <constraint firstItem="N8M-Gm-mQi" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="Ain-tc-GRp"/>
                             <constraint firstItem="5Rs-Op-mjt" firstAttribute="top" secondItem="Vg6-xs-vuj" secondAttribute="bottom" constant="8" id="BgV-ld-049"/>
+                            <constraint firstItem="mbr-qK-3Zu" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="9" id="CtY-OD-2ij"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="trailing" secondItem="8um-WJ-1ic" secondAttribute="trailingMargin" id="DH2-cg-0mG"/>
+                            <constraint firstItem="sYV-XD-yzc" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="13" id="FU5-tM-9Ia"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="top" secondItem="N8M-Gm-mQi" secondAttribute="bottom" id="Jb1-Td-fhA"/>
                             <constraint firstItem="GiI-Hc-2oH" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="MLg-Km-RWI"/>
                             <constraint firstItem="jR7-fb-UEA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8um-WJ-1ic" secondAttribute="trailingMargin" id="OoO-M6-57z"/>
                             <constraint firstItem="jR7-fb-UEA" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5Rs-Op-mjt" secondAttribute="trailing" constant="126" id="PHd-NK-FLx"/>
                             <constraint firstItem="Vg6-xs-vuj" firstAttribute="top" secondItem="GiI-Hc-2oH" secondAttribute="bottom" constant="8" id="W2v-pN-odk"/>
+                            <constraint firstItem="881-8Y-7Na" firstAttribute="top" secondItem="sYV-XD-yzc" secondAttribute="bottom" constant="30" id="XFb-XN-jES"/>
                             <constraint firstItem="jR7-fb-UEA" firstAttribute="trailing" secondItem="8um-WJ-1ic" secondAttribute="trailingMargin" id="XK5-gJ-20k"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="dtP-uT-RvH"/>
                             <constraint firstItem="881-8Y-7Na" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="20" id="ecY-Kc-Omk"/>
@@ -610,6 +632,7 @@
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="leading" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="p0c-Hl-VYf"/>
                             <constraint firstItem="nNp-fV-h6b" firstAttribute="centerX" secondItem="8um-WJ-1ic" secondAttribute="centerX" id="sLF-0V-ySS"/>
                             <constraint firstItem="GiI-Hc-2oH" firstAttribute="top" secondItem="iO7-de-TlZ" secondAttribute="bottom" constant="20" id="xLA-Au-4qh"/>
+                            <constraint firstItem="sYV-XD-yzc" firstAttribute="leading" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" constant="92" id="zJk-Jm-co2"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -617,6 +640,7 @@
                                 <exclude reference="dtP-uT-RvH"/>
                                 <exclude reference="PHd-NK-FLx"/>
                                 <exclude reference="XK5-gJ-20k"/>
+                                <exclude reference="ecY-Kc-Omk"/>
                             </mask>
                         </variation>
                     </view>
@@ -633,6 +657,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYw-V2-p1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2643.5" y="1822.5"/>
+        </scene>
+        <!--Sunat View Controller-->
+        <scene sceneID="Eaq-Gi-5pb">
+            <objects>
+                <viewController id="B0U-Hj-ekr" customClass="SunatViewController" customModule="IgvPeruApple" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QMA-z1-ZH5"/>
+                        <viewControllerLayoutGuide type="bottom" id="kbi-HC-7Rp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PyM-kP-cUt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tY-17-AE0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7tY-17-AE0" firstAttribute="leading" secondItem="PyM-kP-cUt" secondAttribute="leadingMargin" constant="-20" id="7sN-iy-e1m"/>
+                            <constraint firstItem="7tY-17-AE0" firstAttribute="top" secondItem="PyM-kP-cUt" secondAttribute="topMargin" id="Bfj-ZG-pT5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7tY-17-AE0" secondAttribute="trailing" constant="-20" id="huX-Fc-01n"/>
+                            <constraint firstItem="kbi-HC-7Rp" firstAttribute="top" secondItem="7tY-17-AE0" secondAttribute="bottom" id="qet-kH-oyw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="SunatView" destination="7tY-17-AE0" id="nyk-vx-jpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HsK-ZL-S0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2643.5" y="2681.5"/>
         </scene>
         <!--Historial View Controller-->
         <scene sceneID="3GX-7s-LHo">
