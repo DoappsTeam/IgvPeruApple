@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         customNavigationBar()
+        customSegmentedControl()
     }
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "page"{
@@ -65,6 +68,12 @@ class ViewController: UIViewController {
         let imageTitle = UIImageView(image: UIImage(named: "img_header"))
         self.navigationItem.titleView = imageTitle
     }
+    
+    func  customSegmentedControl(){
+        let attr = NSDictionary(object: UIFont(name: "SourceSansPro-Regular", size: 6.0)!, forKey: NSFontAttributeName)
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , forState: .Normal)
+    }
+    
 }
 
 

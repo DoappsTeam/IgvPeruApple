@@ -278,7 +278,7 @@
 				TargetAttributes = {
 					91FCFC3B1C6F996900EED667 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 54ASVN33N4;
+						DevelopmentTeam = ULRWX57QJQ;
 					};
 					91FCFC521C6F996A00EED667 = {
 						CreatedOnToolsVersion = 7.2;
@@ -499,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: DOAPPS S.A.C (ULRWX57QJQ)";
 				INFOPLIST_FILE = IgvPeruApple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: DOAPPS S.A.C (ULRWX57QJQ)";
 				INFOPLIST_FILE = IgvPeruApple/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
