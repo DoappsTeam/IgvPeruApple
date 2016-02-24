@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     }
     
     func  customSegmentedControl(){
-        let attr = NSDictionary(object: UIFont(name: "SourceSansPro-Regular", size: 6.0)!, forKey: NSFontAttributeName)
+        let attr = NSDictionary(object: UIFont(name: "SourceSansPro-Regular", size: 9.0)!, forKey: NSFontAttributeName)
         UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , forState: .Normal)
     }
     
