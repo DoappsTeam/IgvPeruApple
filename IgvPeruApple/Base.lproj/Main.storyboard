@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fYF-MC-cLx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -629,7 +629,7 @@
                             <constraint firstItem="881-8Y-7Na" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="20" id="ecY-Kc-Omk"/>
                             <constraint firstItem="nNp-fV-h6b" firstAttribute="top" secondItem="Vg6-xs-vuj" secondAttribute="bottom" constant="8" id="g3C-7w-tWh"/>
                             <constraint firstItem="mbr-qK-3Zu" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="12" id="lR1-fH-9gI"/>
-                            <constraint firstItem="mbr-qK-3Zu" firstAttribute="leading" secondItem="sYV-XD-yzc" secondAttribute="trailing" constant="-1" id="mlu-UW-lpc"/>
+                            <constraint firstItem="mbr-qK-3Zu" firstAttribute="leading" secondItem="sYV-XD-yzc" secondAttribute="trailing" constant="-9" id="mlu-UW-lpc"/>
                             <constraint firstItem="jR7-fb-UEA" firstAttribute="top" secondItem="Vg6-xs-vuj" secondAttribute="bottom" constant="8" id="nmj-bx-aqM"/>
                             <constraint firstItem="SBL-iX-ceV" firstAttribute="leading" secondItem="8um-WJ-1ic" secondAttribute="leadingMargin" id="p0c-Hl-VYf"/>
                             <constraint firstItem="sYV-XD-yzc" firstAttribute="top" secondItem="SBL-iX-ceV" secondAttribute="bottom" constant="8" id="reF-5q-Q4B"/>
