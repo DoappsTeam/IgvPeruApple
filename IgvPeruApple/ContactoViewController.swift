@@ -16,7 +16,7 @@ class ContactoViewController: UIViewController {
     }
 
     @IBAction func buttonShare(sender: AnyObject) {
-        let shareText = "Checkout my latest app #coolapp"
+        let shareText = "Te invito a descargar IGV Perú \n\n https://itunes.apple.com/pe/app/igv-peru/id1086378487?mt=8"
         let activityViewController = UIActivityViewController(activityItems:[shareText], applicationActivities: nil)
             presentViewController(activityViewController, animated: true, completion: nil)
     }
